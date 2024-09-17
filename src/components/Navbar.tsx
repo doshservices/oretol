@@ -1,29 +1,40 @@
 import { Link, NavLink, useLocation } from "react-router-dom"
 import { appLogo, appLogoWhite } from "../utils/constants"
 import { useRef, useState } from "react"
-// import useClickOutside from "../utils/useClickOutside"
+import useClickOutside from "../utils/useClickOutside"
 import { navStyles } from "../utils/styles"
 
 export const Navbar = () => {
+
     const location = useLocation()
     const navRef = useRef<HTMLElement>(null)
     const headerRef = useRef<HTMLHeadingElement>(null)
     const [isMenuActive, setIsMenuActive] = useState<boolean>(false);
+    const [backgroundColor, setBackgroundColor] = useState<boolean>(false)
+
+    const changeColor = () => {
+        if (window.scrollY >= 70) {
+            setBackgroundColor(true)
+        } else {
+            setBackgroundColor(false)
+        }
+    }
+    window.addEventListener('scroll', changeColor)
 
     const showMenu = () => {
         navRef?.current?.classList.toggle('!left-0')
         setIsMenuActive((prevState) => !prevState);
     }
 
-    // useClickOutside(headerRef, () => {
-    //     navRef?.current?.classList.remove('!left-0')
-    //     setIsMenuActive((prevState) => !prevState);
-    // })
+    useClickOutside(headerRef, () => {
+        navRef?.current?.classList.remove('!left-0')
+        setIsMenuActive(false);
+    })
 
     return (
-        <header ref={headerRef} className={`${navStyles.header} ${location.pathname === '/' && !isMenuActive ? 'bg-transparent text-white' : 'bg-white text-Primary'}`}>
+        <header ref={headerRef} className={`${navStyles.header} ${location.pathname === '/' && !isMenuActive && !backgroundColor ? 'bg-transparent text-white' : 'bg-white text-Primary'}`}>
             <Link className="lg:hidden" to='/'>
-                {location.pathname === '/' && !isMenuActive ?
+                {location.pathname === '/' && !isMenuActive && !backgroundColor ?
                     <img className="h-10" src={appLogoWhite} alt="" /> :
                     <img className="h-10" src={appLogo} alt="" />
                 }
@@ -41,7 +52,7 @@ export const Navbar = () => {
             </button>
             <nav ref={navRef} className={navStyles.nav}>
                 <Link className="hidden lg:block" to='/'>
-                    {location.pathname === '/' ?
+                    {location.pathname === '/' && !backgroundColor ?
                         <img className="h-12" src={appLogoWhite} alt="" /> :
                         <img className="h-12" src={appLogo} alt="" />
                     }
@@ -63,7 +74,7 @@ export const Navbar = () => {
                         </svg>
                     </NavLink>
                 </div>
-                <NavLink onClick={showMenu} className={`border-[2px] text-center rounded-lg py-3 px-6 border-Primary ${location.pathname === '/' ? 'lg:border-white' : 'lg:border-Primary'}`} to='/'>Contact Us</NavLink>
+                <NavLink onClick={showMenu} className={`ease-in-out border-[2px] text-center rounded-lg py-3 px-6 border-Primary max-w-[250px] ${location.pathname === '/' && !backgroundColor ? 'lg:border-white' : 'lg:border-Primary'}`} to='/'>Contact Us</NavLink>
             </nav>
         </header>
     )
