@@ -8,6 +8,13 @@ import officeImg from '../assets/pictures/oretol-office-home.png';
 import { useState } from 'react';
 import { whatWeDo } from '../data/whatWeDo';
 import { ourProjects } from '../data/projects';
+import { insights } from '../data/blog/insights';
+import { InsightCard } from '../components/Blog/InsightsCard';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { CollaboratorContact } from '../components/CollaboratorContact';
 
 const Home = () => {
     const [officeLocation, setOfficeLocation] = useState<string>('lagos')
@@ -116,7 +123,6 @@ const Home = () => {
             </section>
             <section className='py-16 relative text-Primary bg-light200 z-10 px-4 sm:px-0 sm:pl-[7%]'>
                 <TopWatermark />
-                <BottomWatermark />
                 <h2 className='line-heading text-sm uppercase mb-4 text-dark-200'>WHAT WE HAVE BUILT</h2>
                 <h3 className='font-medium text-2xl md:text-[2.8rem] leading-[1.3] mb-14'>Explore an unparalleled living experience <br /> through our ongoing projects.</h3>
                 <div className='grid sm:grid-cols-[.6fr,_1fr] gap-8 md:gap-x-16'>
@@ -139,9 +145,53 @@ const Home = () => {
                     </figure>
                 </div>
             </section>
-            <section className="px-4 sm:px-0 sm:pl-[7%]">
+            <section className="pl-4 sm:pl-[7%] py-16 relative">
+                <TopWatermark />
                 <h3 className='font-medium text-2xl text-Primary'>Featured Insights</h3>
+                <Swiper
+                    breakpoints={{
+                        250: {
+                            slidesPerView: 1,
+                            spaceBetween: 10,
+                        },
+                        350: {
+                            slidesPerView: 1.3,
+                            spaceBetween: 20,
+                        },
+                        420: {
+                            slidesPerView: 1.5,
+                            spaceBetween: 20,
+                        },
+                        650: {
+                            slidesPerView: 2.5,
+                            spaceBetween: 20,
+                        },
+                        1024: {
+                            slidesPerView: 3.2,
+                            spaceBetween: 20,
+                        },
+                        1400: {
+                            slidesPerView: 4.5,
+                            spaceBetween: 30,
+                        },
+                    }}
+                    spaceBetween={25}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    modules={[Pagination]}
+                    className="mt-8 pr-4 sm:pr-[7%] insight-swiper"
+                >
+                    {insights.map((insight, index: number) =>
+                        <SwiperSlide key={index}>
+                            <InsightCard
+                                insight={insight}
+                            />
+                        </SwiperSlide>
+                    )}
+                </Swiper>
             </section>
+            <CollaboratorContact />
         </>
     )
 }

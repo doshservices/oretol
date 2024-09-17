@@ -22,3 +22,32 @@
         left: -205px;
     }
 }
+
+.insight-swiper {
+    position: static !important;
+}
+
+@media (min-width: 600px) {
+    .insight-swiper .swiper-pagination {
+        top: 4.25rem !important;
+        width: fit-content !important;
+        height: fit-content;
+        right: 30% !important;
+        left: unset !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .insight-swiper .swiper-pagination {
+        bottom: 2rem !important;
+    }
+}
+
+.insight-swiper .swiper-pagination-bullet {
+    background: #E2E2E2;
+    opacity: 1;
+}
+
+.insight-swiper .swiper-pagination-bullet-active {
+    background: #1B1F38;
+}
