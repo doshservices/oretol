@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
+
+.line-heading {
+    position: relative;
+}
+
+.line-heading::before {
+    position: absolute;
+    display: block;
+    content: '';
+    height: 1.9px;
+    background-color: #42BEFA;
+    width: 200px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -220px;
+    pointer-events: none;
+}
+
+@media (max-width: 640px) {
+    .line-heading::before {
+        left: -205px;
+    }
+}

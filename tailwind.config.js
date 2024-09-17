@@ -15,21 +15,17 @@ export const theme = {
       'lsm': '320px'
     },
     colors: {
-      'Primary': '#FF0000',
-      'Secondary': '#2D2D2D',
-      'white200': '#F8F8F8',
-      'FooterGray': '#F0F0F0',
-      'Black': '#000000',
+      'Primary': '#1B1F38',
+      'Secondary': '#42BEFA',
+      'grey100': '#6A6A6A',
+      'dark200': '#2d2d2d',
+      'light200': '#f8f8f8',
       'transparentDark': 'hsla(0, 0%, 13%, 0.8)',
       'borderHash': '#BABABA',
       'borderCartActions': '#999999'
     },
     fontFamily: {
-      montserrat: ['Montserrat', 'sans-serif'],
-      raleway: ['Raleway', 'sans-serif'],
-      clashGrotesk: ['ClashGrotesk'],
-      outfit: ['Outfit', 'sans-serif'],
-      inter: ['Inter', 'sans-serif'],
+      outfit: ['Outfit, Montserrat', 'sans-serif'],
     },
     boxShadow: {
       'shawdowCart': '0px 1px 2px 0px #1018280D'
