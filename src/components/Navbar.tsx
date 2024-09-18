@@ -65,8 +65,8 @@ export const Navbar = () => {
                             <path fillRule="evenodd" clipRule="evenodd" d="M7.707 9.29299C7.317 8.90299 6.683 8.90299 6.293 9.29299C5.903 9.68299 5.903 10.317 6.293 10.707L11.243 15.657C11.437 15.851 11.691 15.949 11.946 15.95C12.206 15.953 12.466 15.855 12.664 15.657L17.614 10.707C18.004 10.317 18.004 9.68299 17.614 9.29299C17.223 8.90299 16.59 8.90299 16.199 9.29299L11.953 13.539L7.707 9.29299Z" fill={location.pathname === '/' ? "#F8F8F8" : '#1b1f38'} />
                         </svg>
                     </NavLink>
-                    <NavLink onClick={showMenu} to='/'>Our work</NavLink>
-                    <NavLink className='w-fit' onClick={showMenu} to='/'>Insights</NavLink>
+                    <NavLink onClick={showMenu} to='/work'>Our work</NavLink>
+                    <NavLink className='w-fit' onClick={showMenu} to='/insight'>Insights</NavLink>
                     <NavLink className='relative flex items-center gap-1 w-fit' to='/'>
                         <span>Resources</span>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -74,7 +74,7 @@ export const Navbar = () => {
                         </svg>
                     </NavLink>
                 </div>
-                <NavLink onClick={showMenu} className={`ease-in-out border-[2px] text-center rounded-lg py-3 px-6 border-Primary max-w-[250px] ${location.pathname === '/' && !backgroundColor ? 'lg:border-white' : 'lg:border-Primary'}`} to='/'>Contact Us</NavLink>
+                <NavLink onClick={showMenu} className={`ease-in-out border-[2px] text-center rounded-lg py-3 px-6 border-Primary max-w-[250px] ${location.pathname === '/' && !backgroundColor ? 'lg:border-white' : 'lg:border-Primary'}`} to='/contact'>Contact Us</NavLink>
             </nav>
         </header>
     )
