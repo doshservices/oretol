@@ -58,7 +58,7 @@ export const Navbar = () => {
                     <div className="fixed bg-black/40 inset-0 pointer-events-none -z-10 top-[60px] md:hidden"></div>
                 }
                 <div className="flex flex-col lg:flex-row lg:items-center gap-y-7 gap-x-[5%] lg:grow justify-center">
-                    <NavLink onClick={showMenu} className='w-fit' to='/about'>Who we are</NavLink>
+                    <NavLink className={({ isActive }) => (isActive ? "active w-fit" : "w-fit")} onClick={showMenu} to='/about'>Who we are</NavLink>
                     <NavLink onClick={showMenu} className='relative flex items-center gap-1 w-fit' to='/services'>
                         <span>Services</span>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

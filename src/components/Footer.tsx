@@ -8,9 +8,9 @@ export const Footer = () => {
                 <img src={appLogo} className="h-10 lg:h-12 block mx-auto sm:mx-0" alt="app logo" />
                 <div className="flex justify-center sm:justify-start flex-wrap gap-x-4 sm:gap-x-8 lg:gap-x-[8%] gap-y-4 mt-6 text-sm sm:text-base font-medium text-dark200">
                     <Link to='/contact'>Contact Us</Link>
-                    <Link to='/contact'>What We Do</Link>
-                    <Link to='/contact'>Our Work</Link>
-                    <Link to='/contact'>Insights</Link>
+                    <Link to='/about'>What We Do</Link>
+                    <Link to='/work'>Our Work</Link>
+                    <Link to='/insight'>Insights</Link>
                 </div>
             </div>
             <div>
