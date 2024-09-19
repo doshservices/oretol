@@ -7,7 +7,6 @@ import { navStyles } from "../utils/styles"
 export const Navbar = () => {
 
     const location = useLocation()
-    const navRef = useRef<HTMLElement>(null)
     const headerRef = useRef<HTMLHeadingElement>(null)
     const [isMenuActive, setIsMenuActive] = useState<boolean>(false);
     const [backgroundColor, setBackgroundColor] = useState<boolean>(false)
@@ -22,18 +21,16 @@ export const Navbar = () => {
     window.addEventListener('scroll', changeColor)
 
     const showMenu = () => {
-        navRef?.current?.classList.toggle('!left-0')
         setIsMenuActive((prevState) => !prevState);
     }
 
     useClickOutside(headerRef, () => {
-        navRef?.current?.classList.remove('!left-0')
         setIsMenuActive(false);
     })
 
     return (
         <header ref={headerRef} className={`${navStyles.header} ${location.pathname === '/' && !isMenuActive && !backgroundColor ? 'bg-transparent text-white' : 'bg-white text-Primary'}`}>
-            <Link className="lg:hidden" to='/'>
+            <Link className="lg:hidden" to='/' onClick={(() => setIsMenuActive(false))}>
                 {location.pathname === '/' && !isMenuActive && !backgroundColor ?
                     <img className="h-10" src={appLogoWhite} alt="" /> :
                     <img className="h-10" src={appLogo} alt="" />
@@ -50,29 +47,32 @@ export const Navbar = () => {
                     </svg>
                 }
             </button>
-            <nav ref={navRef} className={navStyles.nav}>
+            <nav className={`${navStyles.nav} ${isMenuActive ? '!left-0' : '-left-full'}`}>
                 <Link className="hidden lg:block" to='/'>
                     {location.pathname === '/' && !backgroundColor ?
                         <img className="h-12" src={appLogoWhite} alt="" /> :
                         <img className="h-12" src={appLogo} alt="" />
                     }
                 </Link>
+                {isMenuActive &&
+                    <div className="fixed bg-black/40 inset-0 pointer-events-none -z-10 top-[60px] md:hidden"></div>
+                }
                 <div className="flex flex-col lg:flex-row lg:items-center gap-y-7 gap-x-[5%] lg:grow justify-center">
-                    <NavLink className='w-fit' onClick={showMenu} to='/about'>Who we are</NavLink>
-                    <NavLink className='relative flex items-center gap-1 w-fit' to='/services'>
+                    <NavLink onClick={showMenu} className='w-fit' to='/about'>Who we are</NavLink>
+                    <NavLink onClick={showMenu} className='relative flex items-center gap-1 w-fit' to='/services'>
                         <span>Services</span>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fillRule="evenodd" clipRule="evenodd" d="M7.707 9.29299C7.317 8.90299 6.683 8.90299 6.293 9.29299C5.903 9.68299 5.903 10.317 6.293 10.707L11.243 15.657C11.437 15.851 11.691 15.949 11.946 15.95C12.206 15.953 12.466 15.855 12.664 15.657L17.614 10.707C18.004 10.317 18.004 9.68299 17.614 9.29299C17.223 8.90299 16.59 8.90299 16.199 9.29299L11.953 13.539L7.707 9.29299Z" fill={location.pathname === '/' ? "#F8F8F8" : '#1b1f38'} />
+                            <path fillRule="evenodd" clipRule="evenodd" d="M7.707 9.29299C7.317 8.90299 6.683 8.90299 6.293 9.29299C5.903 9.68299 5.903 10.317 6.293 10.707L11.243 15.657C11.437 15.851 11.691 15.949 11.946 15.95C12.206 15.953 12.466 15.855 12.664 15.657L17.614 10.707C18.004 10.317 18.004 9.68299 17.614 9.29299C17.223 8.90299 16.59 8.90299 16.199 9.29299L11.953 13.539L7.707 9.29299Z" fill='currentColor' />
                         </svg>
                     </NavLink>
                     <NavLink onClick={showMenu} to='/work'>Our work</NavLink>
-                    <NavLink className='w-fit' onClick={showMenu} to='/insight'>Insights</NavLink>
-                    <NavLink className='relative flex items-center gap-1 w-fit' to='/'>
+                    <NavLink onClick={showMenu} className='w-fit' to='/insight'>Insights</NavLink>
+                    <a className='relative flex items-center gap-1 w-fit'>
                         <span>Resources</span>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fillRule="evenodd" clipRule="evenodd" d="M7.707 9.29299C7.317 8.90299 6.683 8.90299 6.293 9.29299C5.903 9.68299 5.903 10.317 6.293 10.707L11.243 15.657C11.437 15.851 11.691 15.949 11.946 15.95C12.206 15.953 12.466 15.855 12.664 15.657L17.614 10.707C18.004 10.317 18.004 9.68299 17.614 9.29299C17.223 8.90299 16.59 8.90299 16.199 9.29299L11.953 13.539L7.707 9.29299Z" fill={location.pathname === '/' ? "#F8F8F8" : '#1b1f38'} />
+                            <path fillRule="evenodd" clipRule="evenodd" d="M7.707 9.29299C7.317 8.90299 6.683 8.90299 6.293 9.29299C5.903 9.68299 5.903 10.317 6.293 10.707L11.243 15.657C11.437 15.851 11.691 15.949 11.946 15.95C12.206 15.953 12.466 15.855 12.664 15.657L17.614 10.707C18.004 10.317 18.004 9.68299 17.614 9.29299C17.223 8.90299 16.59 8.90299 16.199 9.29299L11.953 13.539L7.707 9.29299Z" fill='currentColor' />
                         </svg>
-                    </NavLink>
+                    </a>
                 </div>
                 <NavLink onClick={showMenu} className={`ease-in-out border-[2px] text-center rounded-lg py-3 px-6 border-Primary max-w-[250px] ${location.pathname === '/' && !backgroundColor ? 'lg:border-white' : 'lg:border-Primary'}`} to='/contact'>Contact Us</NavLink>
             </nav>

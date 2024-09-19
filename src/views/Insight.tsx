@@ -3,6 +3,7 @@ import { InsightCard } from "../components/Blog/InsightsCard"
 import { PagesContainer } from "../components/PagesContainer"
 import { insights } from "../data/blog/insights"
 import { CollaboratorContact } from "../components/CollaboratorContact"
+import { TopWatermark } from "../components/watermark"
 
 const Insight = () => {
     const [visionType, setVisionType] = useState<string>('dredging')
@@ -11,7 +12,8 @@ const Insight = () => {
             <section className="px-4 sm:px-[7%] py-12">
                 <h2 className='line-heading font-medium text-2xl md:text-[2.8rem] max-w-[710px] leading-[1.35] text-Primary'>Insights</h2>
             </section>
-            <section className="px-4 sm:px-[7%] py-12 bg-white">
+            <section className="px-4 sm:px-[7%] py-12 bg-white relative z-10">
+                <TopWatermark />
                 <div className='flex items-center flex-wrap gap-x-8 gap-y-4 mb-8'>
                     <button className={`text-base py-1 ssm:text-lg ${visionType === 'dredging' ? 'border-b-2 border-b-Secondary text-Secondary' : 'border-b-2 border-b-transparent text-dark200'}`} onClick={() => setVisionType('dredging')}>Latest</button>
                     <button className={`text-base py-1 ssm:text-lg ${visionType === 'real-estate' ? 'border-b-2 border-b-Secondary text-Secondary' : 'border-b-2 border-b-transparent text-dark200'}`} onClick={() => setVisionType('real-estate')}>Sustainability</button>

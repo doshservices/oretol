@@ -16,7 +16,7 @@ const Contact = () => {
                 </div>
             </section>
             <div className="grid sm:grid-cols-2 md:grid-cols-[.6fr,_1fr]">
-                <div className="bg-Primary px-4 sm:px-[14%] py-10 relative z-10">
+                <div className="bg-Primary px-4 sm:px-[16%] py-10 relative z-10">
                     <img src={watermark} className="absolute right-0 top-1/2 -translate-y-1/2 opacity-75 -z-[1]" alt="" />
                     <div className="border-b border-b-[#F8F8F866] mb-6 pb-5">
                         <ContactAddress

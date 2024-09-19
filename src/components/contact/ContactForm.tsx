@@ -3,7 +3,7 @@ import { styles } from "../../utils/styles"
 
 export const ContactForm = () => {
     return (
-        <form className="bg-white px-4 sm:px-[14%] py-10">
+        <form className="bg-white px-4 sm:px-[11.3%] py-10">
             <label htmlFor="fullName" className={`${styles.labelStyle}`}>Full Name</label>
             <input
                 name='fullName' id='fullName'
@@ -27,7 +27,7 @@ export const ContactForm = () => {
                 name='message' id='message'
                 className={`${styles.contactInput} resize-none h-36 py-4 mb-6`}
                 placeholder="How can we help you?"></textarea>
-            <button className="block w-full border border-Primary py-3 text-sm font-medium">Send message</button>
+            <button className="block w-full border border-Primary py-3 text-sm font-medium rounded-sm hover:bg-Secondary hover:border-Secondary duration-300 ease-in-out transition">Send message</button>
         </form>
     )
 }

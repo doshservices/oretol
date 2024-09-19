@@ -1,4 +1,4 @@
-import topImg from '../assets/pictures/oretol watermark.png'
+import topImg from '../assets/pictures/oretol watermark-top.png'
 import bottomImg from '../assets/pictures/oretol watermark-bottom.png'
 
 export const TopWatermark = () => {
