@@ -11,3 +11,10 @@ export interface IInsights {
         date: string
     }
 }
+
+export interface IContactLocation {
+    address: string,
+    number: string,
+    email: string
+    heading: string
+}

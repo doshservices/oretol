@@ -4,5 +4,7 @@ export const navStyles = {
 }
 
 export const styles = {
-    primaryBtn: 'text-sm border-Primary border-2 rounded-md px-3 md:px-6 py-2.5 font-medium inline-block hover:bg-Secondary duration-300 ease-in-out transition'
+    primaryBtn: 'text-sm border-Primary border-2 rounded-md px-3 md:px-6 py-2.5 font-medium inline-block hover:bg-Secondary duration-300 ease-in-out transition',
+    contactInput: "border border-dark200 rounded-sm text-dark200 text-sm placeholder:text-[#2D2D2D99] block w-full py-3 px-4 focus:outline-grey100/50 bg-transparent",
+    labelStyle: 'text-dark200 font-base mb-1 inline-block'
 }
