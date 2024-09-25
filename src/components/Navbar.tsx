@@ -1,24 +1,16 @@
-import { Link, NavLink, useLocation } from "react-router-dom"
+import { NavLink, useLocation } from "react-router-dom"
 import { appLogo, appLogoWhite } from "../utils/constants"
 import { useRef, useState } from "react"
 import useClickOutside from "../utils/useClickOutside"
 import { navStyles } from "../utils/styles"
+import { useScrollColorChange } from "../utils/useScroll"
 
 export const Navbar = () => {
 
     const location = useLocation()
     const headerRef = useRef<HTMLHeadingElement>(null)
     const [isMenuActive, setIsMenuActive] = useState<boolean>(false);
-    const [backgroundColor, setBackgroundColor] = useState<boolean>(false)
-
-    const changeColor = () => {
-        if (window.scrollY >= 70) {
-            setBackgroundColor(true)
-        } else {
-            setBackgroundColor(false)
-        }
-    }
-    window.addEventListener('scroll', changeColor)
+    const isColorChanged = useScrollColorChange(70);
 
     const showMenu = () => {
         setIsMenuActive((prevState) => !prevState);
@@ -29,13 +21,13 @@ export const Navbar = () => {
     })
 
     return (
-        <header ref={headerRef} className={`${navStyles.header} ${location.pathname === '/' && !isMenuActive && !backgroundColor ? 'bg-transparent text-white' : 'bg-white text-Primary'}`}>
-            <Link className="lg:hidden" to='/' onClick={(() => setIsMenuActive(false))}>
-                {location.pathname === '/' && !isMenuActive && !backgroundColor ?
+        <header ref={headerRef} className={`${navStyles.header} ${location.pathname === '/' && !isMenuActive && !isColorChanged ? 'bg-transparent text-white' : 'bg-white text-Primary'}`}>
+            <a className="lg:hidden" href='/' onClick={(() => setIsMenuActive(false))}>
+                {location.pathname === '/' && !isMenuActive && !isColorChanged ?
                     <img className="h-10" src={appLogoWhite} alt="" /> :
                     <img className="h-10" src={appLogo} alt="" />
                 }
-            </Link>
+            </a>
             <button className="lg:hidden" onClick={showMenu}>
                 {isMenuActive ?
                     <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -48,12 +40,12 @@ export const Navbar = () => {
                 }
             </button>
             <nav className={`${navStyles.nav} ${isMenuActive ? '!left-0' : '-left-full'}`}>
-                <Link className="hidden lg:block" to='/'>
-                    {location.pathname === '/' && !backgroundColor ?
+                <a className="hidden lg:block" href='/'>
+                    {location.pathname === '/' && !isColorChanged ?
                         <img className="h-12" src={appLogoWhite} alt="" /> :
                         <img className="h-12" src={appLogo} alt="" />
                     }
-                </Link>
+                </a>
                 {isMenuActive &&
                     <div className="fixed bg-black/40 inset-0 pointer-events-none -z-10 top-[60px] md:hidden"></div>
                 }
@@ -74,7 +66,7 @@ export const Navbar = () => {
                         </svg>
                     </a>
                 </div>
-                <NavLink onClick={showMenu} className={`ease-in-out border-[2px] text-center rounded-lg py-3 px-6 border-Primary max-w-[250px] ${location.pathname === '/' && !backgroundColor ? 'lg:border-white' : 'lg:border-Primary'}`} to='/contact'>Contact Us</NavLink>
+                <NavLink onClick={showMenu} className={`ease-in-out border-[2px] text-center rounded-lg py-3 px-6 border-Primary max-w-[250px] ${location.pathname === '/' && !isColorChanged ? 'lg:border-white' : 'lg:border-Primary'}`} to='/contact'>Contact Us</NavLink>
             </nav>
         </header>
     )
