@@ -1,5 +1,5 @@
-import homeHero from '../assets/pictures/Hero Section.png';
-import yearsOfEx from '../assets/pictures/years-of-experience.jpg'
+import homeHero from '../assets/pictures/homeHero.png';
+import yearsOfEx from '../assets/pictures/years-of-experience.png'
 import partners from '../assets/pictures/partners.png'
 import projectsDone from '../assets/pictures/project.png'
 import { BottomWatermark, TopWatermark } from '../components/watermark';
@@ -15,6 +15,7 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { CollaboratorContact } from '../components/CollaboratorContact';
+import ReactPlayer from "react-player";
 
 const Home = () => {
     const [officeLocation, setOfficeLocation] = useState<string>('lagos')
@@ -26,8 +27,16 @@ const Home = () => {
 
     return (
         <>
-            <div className='relative h-screen max-h-[700px] flex items-end px-4 sm:px-[7%] py-12 overflow-hidden'>
-                <img src={homeHero} alt="" className='w-full absolute inset-0 min-h-full object-cover -z-[1]' />
+            <div className='relative h-screen max-h-[600px] lg:max-h-[750px] flex items-end px-4 sm:px-[7%] py-12 overflow-hidden'>
+                <ReactPlayer
+                    muted
+                    loop={true}
+                    controls={false}
+                    className="home-hero-video scale-[3.8] sm:scale-[2] lg:scale-[1.5] 3xl:scale-[2] -z-[1] pointer-events-none"
+                    playing={true}
+                    url='https://res.cloudinary.com/dbz1rgohb/video/upload/v1727284583/oretol/IMG_29324_ej4a29.mp4'
+                />
+                <img src={homeHero} alt="" className='w-full absolute inset-0 min-h-full object-cover -z-[2]' />
                 <section className="grow text-white">
                     <h1 className='line-heading text-sm uppercase mb-4'>Sustainability and Innovation</h1>
                     <h2 className='text-3xl md:text-[3rem] font-bold max-w-[600px] leading-[1.4]'>Some Little Note About Land Reclamation Services</h2>
@@ -95,7 +104,7 @@ const Home = () => {
                     </figcaption>
                 </figure>
             </section>
-            <section className='py-16 relative text-Primary'>
+            <section className='py-16 relative text-Primary bg-[#FFFCF5]'>
                 <TopWatermark />
                 <BottomWatermark />
                 <div className="px-4 sm:px-[7%]">
@@ -126,7 +135,7 @@ const Home = () => {
                 <h2 className='line-heading text-sm uppercase mb-4 text-dark-200'>WHAT WE HAVE BUILT</h2>
                 <h3 className='font-medium text-2xl md:text-[2.8rem] leading-[1.3] mb-14'>Explore an unparalleled living experience <br /> through our ongoing projects.</h3>
                 <div className='grid sm:grid-cols-[.6fr,_1fr] gap-8 md:gap-x-16'>
-                    <section className='md:py-8 flex flex-col justify-between gap-8 xl:max-h-[550px]'>
+                    <section className='md:py-8 flex flex-col justify-between gap-8 xl:max-h-[450px]'>
                         <div>
                             <div className='flex items-center justify-between flex-wrap gap-4 pb-4'>
                                 <button className={`text-sm py-1 ${project === 'hampton-bay' ? 'border-b-2 border-b-Secondary text-Secondary' : 'border-b-2 border-b-transparent text-dark200'}`} onClick={() => setProject('hampton-bay')}>Hampton Bay</button>
@@ -141,7 +150,7 @@ const Home = () => {
                         <button className={`${styles.primaryBtn} w-fit`}>View gallery</button>
                     </section>
                     <figure>
-                        <img className='w-full min-h-full object-cover' src={currentProject?.img} alt={currentProject?.description} />
+                        <img className='w-full min-h-full object-cover rounded-bl-md' src={currentProject?.img} alt={currentProject?.description} />
                     </figure>
                 </div>
             </section>

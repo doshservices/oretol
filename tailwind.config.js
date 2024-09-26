@@ -6,6 +6,7 @@ export const content = [
 export const theme = {
   extend: {
     screens: {
+      '3xl': '1800px',
       'xxl': '1350px',
       'xl': '1280px',
       'lg': '1024px',

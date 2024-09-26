@@ -14,10 +14,10 @@ const About = () => {
                 <p className="text-grey100 text-justify">
                     The company is strategically positioned to serve a diverse range of clients and operate in all sectors of the Nigerian market which includes Reclamation Schemes, Chanelisation, Specialist services to the Oil , Gas, Construction and Marine industry, thereby providing services and materials to the country’s flood protection, shoreline protection and providing affordable housing among others.</p>
             </section>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8 sm:gap-5">
+            <div className="px-4 grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8 sm:gap-5">
                 {dredgingGallery.map((gallery, index) =>
                     <figure key={index}>
-                        <img src={gallery} alt="our work" className="w-full" />
+                        <img src={gallery} alt="our work" className="w-full border border-Primary rounded-md overflow-hidden" />
                     </figure>
                 )}
             </div>
@@ -37,10 +37,10 @@ const About = () => {
                     <p className="text-lg grow">The passion to make a positive impact and difference in the dredging and real estate sector.</p>
                 </div>
             </section>
-            <div className="grid grid-cols-2 sm:grid-cols-4">
+            <div className="grid grid-cols-2 sm:grid-cols-4 px-4 gap-3 sm:gap-5 mb-8">
                 {constructionGallery.map((gallery, index) =>
                     <figure key={index}>
-                        <img src={gallery} alt="construction" className="w-full" />
+                        <img src={gallery} alt="construction" className="w-full border border-Primary rounded-md overflow-hidden" />
                     </figure>
                 )}
             </div>

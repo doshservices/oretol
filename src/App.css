@@ -104,3 +104,19 @@ svg {
 .work-blog-card:hover figcaption {
     color: #f8f8f8;
 }
+
+.home-hero-video {
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute;
+    left: 0;
+}
+
+.home-hero-video:before {
+    position: absolute;
+    display: block;
+    content: '';
+    inset: 0;
+    background: hsl(0, 0%, 0%, .2);
+    z-index: 1;
+}
