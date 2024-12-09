@@ -1,7 +1,7 @@
 import partner from '../../assets/pictures/blog/Img - Altru Health System Replacement Hospital in Grand Forks, North Dakota.png'
 import ecoFriendly from '../../assets/pictures/blog/Img - Windermere Fire Station 31.png'
 import beaver from '../../assets/pictures/blog/Img - Ford Newby.png'
-import oretol from '../../assets/pictures/blog/Img - Gordana Milicic.png'
+// import oretol from '../../assets/pictures/blog/Img - Gordana Milicic.png'
 
 export const insights = [
     {
@@ -22,12 +22,12 @@ export const insights = [
         category: 'Market Insight',
         date: 'Dec 10, 2022'
     },
-    {
-        img: oretol,
-        title: 'Oretol Unveils Plans for Vertical Forest Skyscraper in Midtown Manhattan',
-        category: 'Market Insight',
-        date: 'Dec 10, 2022'
-    },
+    // {
+    //     img: oretol,
+    //     title: 'Oretol Unveils Plans for Vertical Forest Skyscraper in Midtown Manhattan',
+    //     category: 'Market Insight',
+    //     date: 'Dec 10, 2022'
+    // },
     {
         img: partner,
         title: 'Oretol Nigeria partners with Royal IHC.',
@@ -46,10 +46,10 @@ export const insights = [
         category: 'Market Insight',
         date: 'Dec 10, 2022'
     },
-    {
-        img: oretol,
-        title: 'Oretol Unveils Plans for Vertical Forest Skyscraper in Midtown Manhattan',
-        category: 'Market Insight',
-        date: 'Dec 10, 2022'
-    },
+    // {
+    //     img: oretol,
+    //     title: 'Oretol Unveils Plans for Vertical Forest Skyscraper in Midtown Manhattan',
+    //     category: 'Market Insight',
+    //     date: 'Dec 10, 2022'
+    // },
 ]

@@ -8,10 +8,10 @@ import officeImg from '../assets/pictures/oretol-office-home.png';
 import { useState } from 'react';
 import { whatWeDo } from '../data/whatWeDo';
 import { ourProjects } from '../data/projects';
-// import { insights } from '../data/blog/insights';
-// import { InsightCard } from '../components/Blog/InsightsCard';
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import { Pagination } from 'swiper/modules';
+import { insights } from '../data/blog/insights';
+import { InsightCard } from '../components/Blog/InsightsCard';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { CollaboratorContact } from '../components/CollaboratorContact';
@@ -154,7 +154,7 @@ const Home = () => {
                     </figure>
                 </div>
             </section>
-            {/* <section className="pl-4 sm:pl-[7%] py-16 relative">
+            <section className="pl-4 sm:pl-[7%] py-16 relative">
                 <TopWatermark />
                 <h3 className='font-medium text-2xl text-Primary'>Featured Insights</h3>
                 <Swiper
@@ -199,7 +199,7 @@ const Home = () => {
                         </SwiperSlide>
                     )}
                 </Swiper>
-            </section> */}
+            </section>
             <CollaboratorContact />
         </>
     )
