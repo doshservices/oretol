@@ -30,7 +30,7 @@ const Contact = () => {
                         heading='Our Nearest Branch'
                         address='Lagos – Ibadan Expressway, Isheri, Ogun State.'
                         email='info@oretol.com'
-                        number='+234 818 712 5513'
+                        number='+234 818 712 5507'
                     />
                 </div>
                 <ContactForm />
