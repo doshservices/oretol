@@ -1,6 +1,6 @@
-import hamptonBay from '../assets/pictures/hampton-bay-project.png'
+import hamptonBay from '../assets/pictures/bay.jpeg'
 import hamptonIsland from '../assets/pictures/hampton-island-project.png'
-import hamptonLake from '../assets/pictures/hampton-lake-project.png'
+import hamptonLake from '../assets/pictures/lake.jpeg'
 import landReclaim from '../assets/pictures/Frame 1000008022.png'
 
 export const ourProjects = [

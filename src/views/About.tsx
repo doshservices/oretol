@@ -39,8 +39,8 @@ const About = () => {
             </section>
             <div className="grid grid-cols-2 sm:grid-cols-4 px-4 gap-3 sm:gap-5 mb-8">
                 {constructionGallery.map((gallery, index) =>
-                    <figure key={index}>
-                        <img src={gallery} alt="construction" className="w-full border border-Primary rounded-md overflow-hidden" />
+                    <figure className="h-[200px] border border-Primary rounded-md overflow-hidden" key={index}>
+                        <img src={gallery} alt="construction" className="w-full min-h-full object-cover" />
                     </figure>
                 )}
             </div>
