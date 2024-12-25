@@ -1,28 +1,81 @@
-import { CollaboratorContact } from "../components/CollaboratorContact"
-import { PagesContainer } from "../components/PagesContainer"
-import serviceBanner from '../assets/pictures/service-banner.png'
+import { CollaboratorContact } from "../components/CollaboratorContact";
+import { PagesContainer } from "../components/PagesContainer";
+import { Navbar } from "../components/Navbar";
+import { services } from "../data/services";
+import { useParams } from "react-router";
+import { useEffect, useState } from "react";
+import { ErrorPage } from "./PageNotFound";
+
+type ServiceProps =
+  | {
+      id: string;
+      name: string;
+      img: string;
+      intro: string;
+      description: string;
+      assurance: string;
+    }
+  | undefined;
 
 const Services = () => {
-    return (
-        <PagesContainer>
+  const { id } = useParams();
+
+  const [service, setService] = useState<ServiceProps>();
+  console.log(service);
+
+  const findSevice = () => {
+    const service = services?.find((service) => id === service?.id);
+    setService(service);
+  };
+
+  useEffect(() => {
+    findSevice();
+    window.addEventListener("popstate", findSevice);
+    return () => {
+      window.removeEventListener("popstate", findSevice);
+    };
+  }, [id]);
+
+  return (
+    <>
+      <Navbar />
+      <PagesContainer>
+        {service ? (
+          <>
             <section className="px-[7%] py-12">
-                <h2 className='line-heading text-sm uppercase mb-4 text-dark200'>DREDGING SERVICES</h2>
-                <div className="flex flex-wrap justify-between gap-y-4 gap-x-16">
-                    <h3 className='font-medium text-2xl md:text-[2.8rem] max-w-[970px] leading-[1.35] text-Primary basis-[200px] grow'>Delivering dredging solution to ensure efficient navigation.</h3>
-                    <p className="text-grey100 text-justify grow basis-[300px]">Oretol Nig. Ltd offers both mechanical and hydraulic dredging solutions to maintain optimal depths for efficient navigation. From mass removal to precise dredging, we can tailor our operations to meet your specific project needs, including rapid dewatering and offsite disposal when required.
-                    </p>
-                </div>
-            </section>
-            <img src={serviceBanner} alt="our service company" className="w-full" />
-            <section className="py-16 text-Primary px-4 sm:px-[7%]">
-                <h2 className='line-heading text-sm uppercase mb-4'>BE REST ASSURED</h2>
-                <p className='font-medium text-2xl md:text-[2.8rem] leading-[1.35]'>
-                    Our dredges are outfitted with state-of-the-art navigational and dredge monitoring equipment, so we know exactly how much material we are digging at any given point.
+              <h2 className="line-heading text-sm uppercase mb-4 text-dark200">
+                {service?.name}
+              </h2>
+              <div className="flex flex-wrap justify-between gap-y-4 gap-x-16">
+                <h3 className="font-medium text-2xl md:text-[2.8rem] max-w-[970px] leading-[1.35] text-Primary basis-[200px] grow">
+                  {service?.intro}
+                </h3>
+                <p className="text-grey100 text-justify grow basis-[300px]">
+                  {service?.description}
                 </p>
+              </div>
+            </section>
+            <img
+              src={service?.img}
+              alt="our service company"
+              className="w-full"
+            />
+            <section className="py-16 text-Primary px-4 sm:px-[7%]">
+              <h2 className="line-heading text-sm uppercase mb-4">
+                BE REST ASSURED
+              </h2>
+              <p className="font-medium text-2xl md:text-[2.8rem] leading-[1.35]">
+                {service?.assurance}
+              </p>
             </section>
             <CollaboratorContact />
-        </PagesContainer>
-    )
-}
+          </>
+        ) : (
+          <ErrorPage />
+        )}
+      </PagesContainer>
+    </>
+  );
+};
 
-export default Services
+export default Services;

@@ -1,13 +1,13 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { appLogo } from "../utils/constants";
+import { appLogo, appLogoWhite } from "../utils/constants";
 import { useRef, useState } from "react";
 import useClickOutside from "../utils/useClickOutside";
 import { navStyles } from "../utils/styles";
 import { useScrollColorChange } from "../utils/useScroll";
-import { useWindowWidth } from "../utils/useWindowWidth";
 import { MenuDropDown } from "./MenuDropdown";
+import { useWindowWidth } from "../utils/useWindowWidth";
 
-export const Navbar = () => {
+export const HomeNav = () => {
   const location = useLocation();
   const headerRef = useRef<HTMLHeadingElement>(null);
   const [isMenuActive, setIsMenuActive] = useState<boolean>(false);
@@ -32,13 +32,17 @@ export const Navbar = () => {
     <header
       ref={headerRef}
       className={`${navStyles.header} ${
-        location.pathname === "/" && !isMenuActive && !isColorChanged
+        !isMenuActive && !isColorChanged
           ? "bg-transparent text-white"
           : "bg-white text-Primary"
       }`}
     >
       <Link className="lg:hidden" to="/" onClick={() => setIsMenuActive(false)}>
-        <img className="h-10" src={appLogo} alt="" />
+        {location.pathname === "/" && !isMenuActive && !isColorChanged ? (
+          <img className="h-10" src={appLogoWhite} alt="" />
+        ) : (
+          <img className="h-10" src={appLogo} alt="" />
+        )}
       </Link>
       <button className="lg:hidden" onClick={showMenu}>
         {isMenuActive ? (
@@ -77,7 +81,11 @@ export const Navbar = () => {
         }`}
       >
         <Link className="hidden lg:block" to="/">
-          <img className="h-12" src={appLogo} alt="" />
+          {!isColorChanged ? (
+            <img className="h-12" src={appLogoWhite} alt="" />
+          ) : (
+            <img className="h-12" src={appLogo} alt="" />
+          )}
         </Link>
         {isMenuActive && (
           <div className="fixed bg-black/40 inset-0 pointer-events-none -z-10 top-[60px] md:hidden"></div>

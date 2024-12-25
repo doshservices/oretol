@@ -16,6 +16,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { CollaboratorContact } from '../components/CollaboratorContact';
 import ReactPlayer from "react-player";
+import { HomeNav } from '../components/HomeNav';
 
 const Home = () => {
     const [officeLocation, setOfficeLocation] = useState<string>('lagos')
@@ -27,6 +28,7 @@ const Home = () => {
 
     return (
         <>
+        <HomeNav/>
             <div className='relative h-screen max-h-[600px] lg:max-h-[750px] flex items-end px-4 sm:px-[7%] py-12 overflow-hidden'>
                 <ReactPlayer
                     muted

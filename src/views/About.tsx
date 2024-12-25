@@ -1,10 +1,13 @@
 import { CollaboratorContact } from "../components/CollaboratorContact"
+import { Navbar } from "../components/Navbar"
 import { PagesContainer } from "../components/PagesContainer"
 import { constructionGallery, dredgingGallery } from "../data/aboutUs"
 import { watermark } from "../utils/constants"
 
 const About = () => {
     return (
+        <>
+              <Navbar />
         <PagesContainer>
             <section className="px-[7%] py-12">
                 <h2 className='line-heading text-sm uppercase mb-4 text-dark200'>ABOUT ORETOL</h2>
@@ -46,6 +49,7 @@ const About = () => {
             </div>
             <CollaboratorContact />
         </PagesContainer>
+        </>
     )
 }
 
