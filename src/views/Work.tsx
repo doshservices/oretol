@@ -2,6 +2,7 @@ import { PagesContainer } from "../components/PagesContainer";
 import { CollaboratorContact } from "../components/CollaboratorContact";
 import { galleryItems } from "../data/blog/work";
 import { Navbar } from "../components/Navbar";
+import { Link } from "react-router-dom";
 
 const Work = () => {
   return (
@@ -21,7 +22,10 @@ const Work = () => {
           {galleryItems.map((item, index) => (
             <figure key={index} className="work-blog-card group">
               <img src={item.src} alt={item.caption} className="w-full" />
-              <div className="relative py-3 sm:py-5 overflow-hidden work-detail">
+              <Link
+                to={`/project/${item?.id}`}
+                className="relative py-3 sm:py-5 overflow-hidden work-detail block"
+              >
                 <figcaption className="text-base sm:text-xl font-medium text-Primary group-hover:text-light200">
                   {item.caption}
                 </figcaption>
@@ -41,7 +45,7 @@ const Work = () => {
                     fill="#F8F8F8"
                   />
                 </svg>
-              </div>
+              </Link>
             </figure>
           ))}
         </div>

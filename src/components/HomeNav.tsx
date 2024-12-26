@@ -138,12 +138,12 @@ export const HomeNav = () => {
           <NavLink onClick={showMenu} className="w-fit" to="/insight">
             Insights
           </NavLink>
-          <a className="relative flex items-center gap-1 w-fit">
+          {/* <a className="relative flex items-center gap-1 w-fit">
             <span>Resources</span>
-            {/* <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fillRule="evenodd" clipRule="evenodd" d="M7.707 9.29299C7.317 8.90299 6.683 8.90299 6.293 9.29299C5.903 9.68299 5.903 10.317 6.293 10.707L11.243 15.657C11.437 15.851 11.691 15.949 11.946 15.95C12.206 15.953 12.466 15.855 12.664 15.657L17.614 10.707C18.004 10.317 18.004 9.68299 17.614 9.29299C17.223 8.90299 16.59 8.90299 16.199 9.29299L11.953 13.539L7.707 9.29299Z" fill='currentColor' />
-                        </svg> */}
-          </a>
+                        </svg>
+          </a> */}
         </div>
         <NavLink
           onClick={showMenu}

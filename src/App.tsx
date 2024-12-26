@@ -5,6 +5,7 @@ import { SupportBtn } from "./components/Button";
 import { Footer } from "./components/Footer";
 import ScrollToTop from "./components/ScrollPageToTop";
 import PageNotFound from "./views/PageNotFound";
+import Projects from "./views/projects";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services/:id" element={<Services />} />
+          <Route path="/project/:id" element={<Projects />} />
           <Route path="/work" element={<Work />} />
           <Route path="/insight" element={<Insight />} />
           <Route path="/contact" element={<Contact />} />
