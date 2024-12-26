@@ -10,7 +10,7 @@ import { whatWeDo } from "../data/whatWeDo";
 import { ourProjects } from "../data/projects";
 import { insights } from "../data/blog/insights";
 import { InsightCard } from "../components/Blog/InsightsCard";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, SwiperClass } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -28,6 +28,7 @@ const Home = () => {
   const currentProject = ourProjects.find(
     (projects) => projects.id === project
   );
+  const [swiperRef, setSwiperRef] = useState<SwiperClass | null>(null);
 
   return (
     <>
@@ -144,21 +145,19 @@ const Home = () => {
         </h3>
         <button
           onClick={() => setOfficeLocation("lagos")}
-          className={`py-1 text-Secondary mr-12 ${
-            officeLocation === "lagos"
-              ? "border-b-2 border-b-Secondary"
-              : "border-b-2 border-b-transparent !text-white"
-          }`}
+          className={`py-1 text-Secondary mr-12 ${officeLocation === "lagos"
+            ? "border-b-2 border-b-Secondary"
+            : "border-b-2 border-b-transparent !text-white"
+            }`}
         >
           Lagos
         </button>
         <button
           onClick={() => setOfficeLocation("ogun")}
-          className={`py-1 text-Secondary ${
-            officeLocation === "ogun"
-              ? "border-b-2 border-b-Secondary"
-              : "border-b-2 border-b-transparent !text-white"
-          }`}
+          className={`py-1 text-Secondary ${officeLocation === "ogun"
+            ? "border-b-2 border-b-Secondary"
+            : "border-b-2 border-b-transparent !text-white"
+            }`}
         >
           Ogun
         </button>
@@ -197,41 +196,37 @@ const Home = () => {
           </h3>
           <div className="flex items-center justify-between flex-wrap lg:max-w-[50%] gap-4 mb-7">
             <button
-              className={`text-base py-1 ssm:text-lg ${
-                visionType === "dredging"
-                  ? "border-b-2 border-b-Secondary text-Secondary"
-                  : "border-b-2 border-b-transparent text-dark200"
-              }`}
+              className={`text-base py-1 ssm:text-lg ${visionType === "dredging"
+                ? "border-b-2 border-b-Secondary text-Secondary"
+                : "border-b-2 border-b-transparent text-dark200"
+                }`}
               onClick={() => setVisionType("dredging")}
             >
               Dredging
             </button>
             <button
-              className={`text-base py-1 ssm:text-lg ${
-                visionType === "real-estate"
-                  ? "border-b-2 border-b-Secondary text-Secondary"
-                  : "border-b-2 border-b-transparent text-dark200"
-              }`}
+              className={`text-base py-1 ssm:text-lg ${visionType === "real-estate"
+                ? "border-b-2 border-b-Secondary text-Secondary"
+                : "border-b-2 border-b-transparent text-dark200"
+                }`}
               onClick={() => setVisionType("real-estate")}
             >
               Real estate
             </button>
             <button
-              className={`text-base py-1 ssm:text-lg ${
-                visionType === "construction"
-                  ? "border-b-2 border-b-Secondary text-Secondary"
-                  : "border-b-2 border-b-transparent text-dark200"
-              }`}
+              className={`text-base py-1 ssm:text-lg ${visionType === "construction"
+                ? "border-b-2 border-b-Secondary text-Secondary"
+                : "border-b-2 border-b-transparent text-dark200"
+                }`}
               onClick={() => setVisionType("construction")}
             >
               Construction
             </button>
             <button
-              className={`text-base py-1 ssm:text-lg ${
-                visionType === "land-reclaim"
-                  ? "border-b-2 border-b-Secondary text-Secondary"
-                  : "border-b-2 border-b-transparent text-dark200"
-              }`}
+              className={`text-base py-1 ssm:text-lg ${visionType === "land-reclaim"
+                ? "border-b-2 border-b-Secondary text-Secondary"
+                : "border-b-2 border-b-transparent text-dark200"
+                }`}
               onClick={() => setVisionType("land-reclaim")}
             >
               Land reclamation
@@ -278,41 +273,37 @@ const Home = () => {
             <div>
               <div className="flex items-center justify-between flex-wrap gap-4 pb-4">
                 <button
-                  className={`text-sm py-1 ${
-                    project === "hampton-bay"
-                      ? "border-b-2 border-b-Secondary text-Secondary"
-                      : "border-b-2 border-b-transparent text-dark200"
-                  }`}
+                  className={`text-sm py-1 ${project === "hampton-bay"
+                    ? "border-b-2 border-b-Secondary text-Secondary"
+                    : "border-b-2 border-b-transparent text-dark200"
+                    }`}
                   onClick={() => setProject("hampton-bay")}
                 >
                   Hampton Bay
                 </button>
                 <button
-                  className={`text-sm py-1 ${
-                    project === "hampton-island"
-                      ? "border-b-2 border-b-Secondary text-Secondary"
-                      : "border-b-2 border-b-transparent text-dark200"
-                  }`}
+                  className={`text-sm py-1 ${project === "hampton-island"
+                    ? "border-b-2 border-b-Secondary text-Secondary"
+                    : "border-b-2 border-b-transparent text-dark200"
+                    }`}
                   onClick={() => setProject("hampton-island")}
                 >
                   Hampton Island
                 </button>
                 <button
-                  className={`text-sm py-1 ${
-                    project === "hampton-lake"
-                      ? "border-b-2 border-b-Secondary text-Secondary"
-                      : "border-b-2 border-b-transparent text-dark200"
-                  }`}
+                  className={`text-sm py-1 ${project === "hampton-lake"
+                    ? "border-b-2 border-b-Secondary text-Secondary"
+                    : "border-b-2 border-b-transparent text-dark200"
+                    }`}
                   onClick={() => setProject("hampton-lake")}
                 >
                   Hampton Lake
                 </button>
                 <button
-                  className={`text-sm py-1 ${
-                    project === "land-reclaim"
-                      ? "border-b-2 border-b-Secondary text-Secondary"
-                      : "border-b-2 border-b-transparent text-dark200"
-                  }`}
+                  className={`text-sm py-1 ${project === "land-reclaim"
+                    ? "border-b-2 border-b-Secondary text-Secondary"
+                    : "border-b-2 border-b-transparent text-dark200"
+                    }`}
                   onClick={() => setProject("land-reclaim")}
                 >
                   Land Reclamation
@@ -348,46 +339,59 @@ const Home = () => {
       <section className="pl-4 sm:pl-[7%] py-16 relative">
         <TopWatermark />
         <h3 className="font-medium text-2xl text-Primary">Featured Insights</h3>
-        <Swiper
-          breakpoints={{
-            250: {
-              slidesPerView: 1,
-              spaceBetween: 10,
-            },
-            350: {
-              slidesPerView: 1.3,
-              spaceBetween: 20,
-            },
-            420: {
-              slidesPerView: 1.5,
-              spaceBetween: 20,
-            },
-            650: {
-              slidesPerView: 2.5,
-              spaceBetween: 20,
-            },
-            1024: {
-              slidesPerView: 3.2,
-              spaceBetween: 20,
-            },
-            1400: {
-              slidesPerView: 4.5,
-              spaceBetween: 30,
-            },
-          }}
-          spaceBetween={25}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Pagination]}
-          className="mt-8 pr-4 sm:pr-[7%] insight-swiper"
-        >
-          {insights.map((insight, index: number) => (
-            <SwiperSlide key={index}>
-              <InsightCard insight={insight} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <div className="relative">
+          <button onClick={() => swiperRef?.slidePrev()} className="absolute top-1/2 z-10 p-1.5 bg-Primary rounded-full">
+            <svg width="25" height="25" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="m15 18-6-6 6-6"></path>
+            </svg>
+          </button>
+          <button onClick={() => swiperRef?.slideNext()} className="absolute top-1/2 z-10 p-1.5 right-0 bg-Primary rounded-full">
+            <svg width="25" height="25" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="m9 18 6-6-6-6"></path>
+            </svg>
+          </button>
+          <Swiper
+            onSwiper={setSwiperRef}
+            breakpoints={{
+              250: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              350: {
+                slidesPerView: 1.3,
+                spaceBetween: 20,
+              },
+              420: {
+                slidesPerView: 1.5,
+                spaceBetween: 20,
+              },
+              650: {
+                slidesPerView: 2.5,
+                spaceBetween: 20,
+              },
+              1024: {
+                slidesPerView: 3.2,
+                spaceBetween: 20,
+              },
+              1400: {
+                slidesPerView: 4.5,
+                spaceBetween: 30,
+              },
+            }}
+            spaceBetween={25}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination]}
+            className="mt-8 pr-4 sm:pr-[7%] insight-swiper"
+          >
+            {insights.map((insight, index: number) => (
+              <SwiperSlide key={index}>
+                <InsightCard insight={insight} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </section>
       <CollaboratorContact />
     </>
