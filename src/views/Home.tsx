@@ -47,7 +47,7 @@ const Home = () => {
           alt=""
           className="w-full absolute inset-0 min-h-full object-cover -z-[2]"
         />
-        <section className="grow text-white">
+        {/* <section className="grow text-white">
           <h1 className="line-heading text-sm uppercase mb-4">
             Sustainability and Innovation
           </h1>
@@ -65,7 +65,7 @@ const Home = () => {
               <a>CONSTRUCTION</a>
             </li>
           </ul>
-        </section>
+        </section> */}
       </div>
       <div className="px-4 sm:px-[7%] py-16 relative text-Primary grid gap-y-8 sm:grid-cols-[1fr,_.8fr] md:grid-cols-[1fr,_.5fr] gap-x-12 lg:gap-x-[12%]">
         <section>

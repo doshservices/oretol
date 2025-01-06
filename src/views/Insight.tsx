@@ -33,26 +33,6 @@ const Insight = () => {
             </button>
             <button
               className={`text-base py-1 ssm:text-lg ${
-                visionType === "real-estate"
-                  ? "border-b-2 border-b-Secondary text-Secondary"
-                  : "border-b-2 border-b-transparent text-dark200"
-              }`}
-              onClick={() => setVisionType("real-estate")}
-            >
-              Sustainability
-            </button>
-            <button
-              className={`text-base py-1 ssm:text-lg ${
-                visionType === "construction"
-                  ? "border-b-2 border-b-Secondary text-Secondary"
-                  : "border-b-2 border-b-transparent text-dark200"
-              }`}
-              onClick={() => setVisionType("construction")}
-            >
-              Market insight
-            </button>
-            <button
-              className={`text-base py-1 ssm:text-lg ${
                 visionType === "land-reclaim"
                   ? "border-b-2 border-b-Secondary text-Secondary"
                   : "border-b-2 border-b-transparent text-dark200"

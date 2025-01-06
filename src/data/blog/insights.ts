@@ -5,16 +5,16 @@ import beaver from '../../assets/pictures/blog/Img - Ford Newby.png'
 
 export const insights = [
     {
-        img: partner,
-        title: 'Oretol Nigeria partners with Royal IHC.',
-        category: 'Market Insight',
-        date: 'Jul 10, 2024'
-    },
-    {
         img: ecoFriendly,
         title: 'Eco-Friendly Condo Complex Set to Open in Ikate, Lekki.',
         category: 'Market Insight',
         date: 'Dec 10, 2024'
+    },
+    {
+        img: partner,
+        title: 'Oretol Nigeria partners with Royal IHC.',
+        category: 'Market Insight',
+        date: 'Jul 10, 2024'
     },
     {
         img: beaver,
@@ -28,24 +28,18 @@ export const insights = [
     //     category: 'Market Insight',
     //     date: 'Dec 10, 2022'
     // },
-    {
-        img: partner,
-        title: 'Oretol Nigeria partners with Royal IHC.',
-        category: 'Market Insight',
-        date: 'Jul 10, 2024'
-    },
-    {
-        img: ecoFriendly,
-        title: 'Eco-Friendly Condo Complex Set to Open in Ikate, Lekki.',
-        category: 'Market Insight',
-        date: 'Dec 10, 2024'
-    },
-    {
-        img: beaver,
-        title: 'Beaver® 65 DDSP Bought By Nigerian Dredging Company, Oretol.',
-        category: 'Market Insight',
-        date: 'Dec 10, 2022'
-    },
+    // {
+    //     img: ecoFriendly,
+    //     title: 'Eco-Friendly Condo Complex Set to Open in Ikate, Lekki.',
+    //     category: 'Market Insight',
+    //     date: 'Dec 10, 2024'
+    // },
+    // {
+    //     img: beaver,
+    //     title: 'Beaver® 65 DDSP Bought By Nigerian Dredging Company, Oretol.',
+    //     category: 'Market Insight',
+    //     date: 'Dec 10, 2022'
+    // },
     // {
     //     img: oretol,
     //     title: 'Oretol Unveils Plans for Vertical Forest Skyscraper in Midtown Manhattan',
