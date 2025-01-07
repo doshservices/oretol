@@ -30,9 +30,11 @@ import lake2 from "../assets/pictures/projects/hamptonLake/Frame 1000008024.png"
 import lake4 from "../assets/pictures/projects/hamptonLake/Frame 1000008025.png";
 import lake6 from "../assets/pictures/projects/hamptonLake/Frame 1000008023.png";
 import lake8 from "../assets/pictures/projects/hamptonLake/Frame 1000008025-1.png";
+import lake9 from "../assets/pictures/projects/lake/Frame 1000008022 (1).png"
 
 
 import island from "../assets/pictures/projects/hamptop-island/Frame 1000008022.png";
+
 
 export const ourProjects = [
   {
@@ -119,5 +121,8 @@ export const ourProjects = [
       reclaim7,
       reclaim8,
     ],
+    otherGallery :[
+      lake9,
+    ]
   },
 ];

@@ -96,8 +96,24 @@ const Projects = () => {
                   {project?.assurance}
                 </p>
               </section>
+              <div className="grid grid-cols-2 sm:grid-cols-4 px-4 gap-3 sm:gap-5">
+                {project?.gallery?.map((gallery, index) => (
+                  <figure
+                    className="h-[200px] border border-Primary rounded-md overflow-hidden"
+                    key={index}
+                  >
+                    <img
+                      src={gallery}
+                      alt="construction"
+                      className="w-full min-h-full object-cover"
+                    />
+                  </figure>
+                ))}
+              </div>
             </div>
-            <CollaboratorContact />
+            <div>
+              <CollaboratorContact />
+            </div>
           </>
         ) : (
           <ErrorPage />
