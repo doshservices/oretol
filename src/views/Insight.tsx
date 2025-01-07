@@ -14,7 +14,7 @@ const Insight = () => {
       <Navbar />
       <PagesContainer>
         <section className="px-4 sm:px-[7%] py-12">
-          <h2 className="line-heading font-medium text-2xl md:text-[2.8rem] max-w-[710px] leading-[1.35] text-Primary">
+          <h2 className="line-heading font-medium text-center w-full text-2xl md:text-[2.8rem] leading-[1.35] text-Primary">
             Insights
           </h2>
         </section>

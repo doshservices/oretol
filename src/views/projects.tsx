@@ -10,6 +10,7 @@ const Projects = () => {
 
   const project = ourProjects?.find((project) => project?.id === id);
 
+
   return (
     <>
       <Navbar />

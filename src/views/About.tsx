@@ -3,6 +3,7 @@ import { Navbar } from "../components/Navbar"
 import { PagesContainer } from "../components/PagesContainer"
 import { constructionGallery, dredgingGallery } from "../data/aboutUs"
 import { watermark } from "../utils/constants"
+import oretolWatermark from '../assets/pictures/oretol watermark-2.png'
 
 const About = () => {
     return (
@@ -31,13 +32,16 @@ const About = () => {
                     To exceed the expectations of our clients by providing the perfect service without violating our ethical standard, integrity, fairness and relationship with our clients, suppliers, subcontractors and associates.
                 </p>
             </section>
-            <section className="py-16 text-Primary px-4 sm:px-[7%]">
+            <section className="py-16 text-Primary px-4 sm:px-[7%] relative">
                 <h2 className='line-heading text-sm uppercase mb-4'>OUR VISION & VALUES</h2>
                 <div className="grid sm:grid-cols-[1fr,_.6fr] gap-x-12">
                     <p className='font-medium text-2xl md:text-[2.8rem] leading-[1.35]'>
                         To become the front runners in the dredging and construction industry across Africa and beyond
                     </p>
-                    <p className="text-lg grow">The passion to make a positive impact and difference in the dredging and real estate sector.</p>
+                    <p className="text-lg grow flex justify-center items-center">The passion to make a positive impact and difference in the dredging and real estate sector.</p>
+                    <div className="w-[250px] h-[250px] absolute right-0">
+                        <img src={oretolWatermark} alt="" />
+                    </div>
                 </div>
             </section>
             <div className="grid grid-cols-2 sm:grid-cols-4 px-4 gap-3 sm:gap-5 mb-8">
