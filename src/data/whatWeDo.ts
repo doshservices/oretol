@@ -9,7 +9,7 @@ export const whatWeDo = [
     img: dredging,
     title: "Innovative solutions for Complex projects ",
     description:
-      "Oretol Nig. Ltd can provide both mechanical and hydraulic dredging options that will maintain the needed depths for efficient navigation.  From mass removal to surgical dredging, we have the ability to right-size our operation for your project needs.  This includes projects that may involve rapid dewatering and disposal in offsite locations.  Our dredges are outfitted with state-of-the-art navigational and dredge monitoring equipment, so we know exactly how much material we are digging at any given point.",
+      "Oretol Nig. Ltd can provide both mechanical and hydraulic dredging options that will maintain the needed depths for efficient navigation.  From mass removal to surgical dredging, we have the ability to right-size our operation for your project needs.  This includes projects that may involve rapid dewatering and disposal in offsite locations.  Our dredgers are outfitted with state-of-the-art navigational and dredging monitoring equipment, so we know exactly how much material we are digging at any given point.",
     url: "services/dredging",
   },
   {

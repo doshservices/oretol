@@ -11,14 +11,14 @@ export const services = [
     description:
       "Oretol Nig. Ltd offers both mechanical and hydraulic dredging solutions to maintain optimal depths for efficient navigation. From mass removal to precise dredging, we can tailor our operations to meet your specific project needs, including rapid dewatering and offsite disposal when required.",
     assurance:
-      "Our dredges are outfitted with state-of-the-art navigational and dredge monitoring equipment, so we know exactly how much material we are digging at any given point.",
+      "Our dredges are outfitted with state-of-the-art navigational and dredging monitoring equipment, so we know exactly how much material we are digging at any given point.",
   },
   {
     id: "real-estate",
     name: "REAL ESTATE SERVICES",
     img: realEstate,
     intro:
-      "Delivering exceptional real estate solutions to redefine moder living.",
+      "Delivering exceptional real estate solutions to redefine modern living.",
     description:
       "Oretol Nig. Ltd provides premium real estate solutions designed to deliver unmatched value and comfort. From expertly planned residential developments to bespoke commercial projects, we tailor our services to meet diverse client needs. With a focus on innovation, quality, and strategic locations, we create spaces that blend functionality with elegance, ensuring a superior living or business experience in every project.",
     assurance:
