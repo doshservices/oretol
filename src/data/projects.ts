@@ -150,21 +150,21 @@ export const ourProjects = [
     details:
       "This land reclamation project represents the perfect synergy of innovation and sustainability, transforming coastal landscapes into thriving opportunities for development. Through advanced engineering and meticulous preparation, each parcel is designed to provide a stable and versatile foundation, ready to accommodate diverse projects. Located in a serene yet accessible area, it offers a unique balance of connectivity and tranquility. More than just reclaiming land, this project is about creating spaces where progress and nature coexist harmoniously, paving the way for a brighter future.",
     gallery: [
-      reclaim1,
-      reclaim2,
+      // reclaim1,
+      // reclaim2,
       reclaim3,
       lake11,
       reclaim5,
-      reclaim6,
-      lake10,
-      reclaim8,
-    ],
-    otherGallery :[
+      // reclaim6,
+      // lake10,
+      // reclaim8,
       reclaim9,
       reclaim10,
       reclaim11,
       reclaim12,
       reclaim13,
+    ],
+    otherGallery :[
       reclaim14,
       reclaim15,
       reclaim16,
