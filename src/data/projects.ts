@@ -19,11 +19,18 @@ import bay8 from "../assets/pictures/projects/hampton-bay/Frame 1000008025-1.png
 import reclaim1 from "../assets/pictures/projects/reclaim1.png";
 import reclaim2 from "../assets/pictures/projects/reclaim2.png";
 import reclaim3 from "../assets/pictures/projects/reclaim3.png";
-import reclaim4 from "../assets/pictures/projects/Frame 1000008025.png";
 import reclaim5 from "../assets/pictures/projects/Frame 1000008024.png";
 import reclaim6 from "../assets/pictures/projects/Frame 1000008023.png";
-import reclaim7 from "../assets/pictures/projects/Frame 1000008022-1.png";
 import reclaim8 from "../assets/pictures/projects/Frame 1000008025-1.png";
+import reclaim9 from "../assets/pictures/projects/land-recaim/Frame 1000008022 (3).png";
+import reclaim10 from "../assets/pictures/projects/land-recaim/Frame 1000008022 (4).png";
+import reclaim11 from "../assets/pictures/projects/land-recaim/Frame 1000008023 (1).png";
+import reclaim12 from "../assets/pictures/projects/land-recaim/Frame 1000008023.png";
+import reclaim13 from "../assets/pictures/projects/land-recaim/Frame 1000008024 (1).png";
+import reclaim14 from "../assets/pictures/projects/land-recaim/Frame 1000008024.png";
+import reclaim15 from "../assets/pictures/projects/land-recaim/Frame 1000008025 (1).png";
+import reclaim16 from "../assets/pictures/projects/land-recaim/Frame 1000008025 (2).png";
+
 
 import lake1 from "../assets/pictures/projects/hamptonLake/Frame 1000008022.png";
 import lake2 from "../assets/pictures/projects/hamptonLake/Frame 1000008024.png";
@@ -31,10 +38,11 @@ import lake4 from "../assets/pictures/projects/hamptonLake/Frame 1000008025.png"
 import lake6 from "../assets/pictures/projects/hamptonLake/Frame 1000008023.png";
 import lake8 from "../assets/pictures/projects/hamptonLake/Frame 1000008025-1.png";
 import lake9 from "../assets/pictures/projects/lake/Frame 1000008022 (1).png"
-
+import lake10 from "../assets/pictures/projects/lake/Frame 1000008022 (2).png"
+import lake11 from "../assets/pictures/projects/lake/Frame 1000008025.png"
 
 import island from "../assets/pictures/projects/hamptop-island/Frame 1000008022.png";
-
+ 
 
 export const ourProjects = [
   {
@@ -55,6 +63,17 @@ export const ourProjects = [
     assurance:
       "Our apartments are equipped with state-of-the-art smart home systems and modern security features, ensuring you have complete control and peace of mind over your living space at all times.",
     gallery: [bay1, bay2, bay3, bay4, bay5, bay6, bay7, bay8],
+    otherGallery :[
+      lake9,
+      reclaim1,
+      reclaim2,
+      reclaim3,
+      lake11,
+      reclaim5,
+      reclaim6,
+      lake10,
+      reclaim8,
+    ]
   },
   {
     id: "hampton-island",
@@ -74,6 +93,17 @@ export const ourProjects = [
     details:
       "Hampton Lake is an exclusive residential development located in the serene neighborhood of Chevron, Lekki. This lakeside project is designed to offer a perfect blend of modern living and natural tranquility, providing residents with a unique lifestyle surrounded by the beauty of nature. The apartments are thoughtfully crafted with contemporary architecture, luxurious finishes, and stunning views of the lake, ensuring comfort and elegance at every turn. Hampton Lake combines accessibility with peace, being just a short drive from key landmarks in Lekki while maintaining a calm, picturesque environment. It's more than a residence—it's a retreat where urban convenience meets lakeside serenity.",
     gallery: [lake1, lake2, reclaim8, lake4, reclaim5, lake6, bay7, lake8],
+    otherGallery :[
+      lake9,
+      reclaim1,
+      reclaim2,
+      reclaim3,
+      lake11,
+      reclaim5,
+      reclaim6,
+      lake10,
+      reclaim8,
+    ]
   },
   {
     id: "hampton-lake",
@@ -93,6 +123,17 @@ export const ourProjects = [
     details:
       "Hampton Lake is an exclusive residential development located in the serene neighborhood of Chevron, Lekki. This lakeside project is designed to offer a perfect blend of modern living and natural tranquility, providing residents with a unique lifestyle surrounded by the beauty of nature. The apartments are thoughtfully crafted with contemporary architecture, luxurious finishes, and stunning views of the lake, ensuring comfort and elegance at every turn. Hampton Lake combines accessibility with peace, being just a short drive from key landmarks in Lekki while maintaining a calm, picturesque environment. It's more than a residence—it's a retreat where urban convenience meets lakeside serenity.",
     gallery: [lake1, lake2, reclaim8, lake4, reclaim5, lake6, bay7, lake8],
+    otherGallery :[
+      lake9,
+      reclaim1,
+      reclaim2,
+      reclaim3,
+      lake11,
+      reclaim5,
+      reclaim6,
+      lake10,
+      reclaim8,
+    ]
   },
   {
     id: "land-reclaim",
@@ -115,14 +156,21 @@ export const ourProjects = [
       reclaim1,
       reclaim2,
       reclaim3,
-      reclaim4,
+      lake11,
       reclaim5,
       reclaim6,
-      reclaim7,
+      lake10,
       reclaim8,
     ],
     otherGallery :[
-      lake9,
+      reclaim9,
+      reclaim10,
+      reclaim11,
+      reclaim12,
+      reclaim13,
+      reclaim14,
+      reclaim15,
+      reclaim16,
     ]
   },
 ];

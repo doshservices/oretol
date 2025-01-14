@@ -97,7 +97,7 @@ const Projects = () => {
                 </p>
               </section>
               <div className="grid grid-cols-2 sm:grid-cols-4 px-4 gap-3 sm:gap-5">
-                {project?.gallery?.map((gallery, index) => (
+                {project?.otherGallery?.map((gallery, index) => (
                   <figure
                     className="h-[200px] border border-Primary rounded-md overflow-hidden"
                     key={index}
