@@ -138,15 +138,15 @@ export const ourProjects = [
     title: "Innovative solutions for Complex projects",
     description:
       "The Hampton Bay Estate is the perfect location for a modern, vibrant lifestyle with extraordinary services and amenities carefully designed to create an enjoyable everyday life.",
-    location: "Ikate, Lekki",
+    location: "null",
     heroImg: hero4,
-    projectDetails: "LAND RECLAIMATION AT LEKKI",
+    projectDetails: "LAND RECLAIMATION",
     assurance:
       "We utilize cutting-edge engineering techniques and advanced environmental monitoring systems, ensuring that every reclaimed area is stable, sustainable, and ready for development at all times.",
-    sector: "REAL ESTATE",
-    serviceProvided: "LAND RECLAIMATION",
-    startDate: "1, Mar 2019",
-    status: "ongoing",
+    sector: "null",
+    serviceProvided: "null",
+    startDate: "null",
+    status: "null",
     details:
       "This land reclamation project represents the perfect synergy of innovation and sustainability, transforming coastal landscapes into thriving opportunities for development. Through advanced engineering and meticulous preparation, each parcel is designed to provide a stable and versatile foundation, ready to accommodate diverse projects. Located in a serene yet accessible area, it offers a unique balance of connectivity and tranquility. More than just reclaiming land, this project is about creating spaces where progress and nature coexist harmoniously, paving the way for a brighter future.",
     gallery: [

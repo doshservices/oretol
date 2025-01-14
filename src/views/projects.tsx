@@ -4,6 +4,7 @@ import { PagesContainer } from "../components/PagesContainer";
 import { ourProjects } from "../data/projects";
 import { CollaboratorContact } from "../components/CollaboratorContact";
 import { ErrorPage } from "./PageNotFound";
+import { Fragment } from "react/jsx-runtime";
 
 const Projects = () => {
   const { id } = useParams();
@@ -31,46 +32,53 @@ const Projects = () => {
                   {project?.projectDetails}
                 </p>
               </section>
-              <div className="flex uppercase px-4 sm:px-[7%] justify-between flex-wrap gap-3">
-                <div>
-                  <p className="text-grey100 text-sm">LOCATION</p>
-                  <p className="text-xl font-semibold text-Primary mt-2">
-                    {project?.location}
-                  </p>
+              {project?.location === "null" ? (
+                <div className="mt-[-5rem]">
                 </div>
-                <div>
-                  <p className="text-grey100 text-sm">SECTOR</p>
-                  <p className="text-xl font-semibold text-Primary mt-2">
-                    {project?.sector}
-                  </p>
-                </div>
-                <div>
-                  <p className="text-grey100 text-sm">SERVICE PROVIDED</p>
-                  <p className="text-xl font-semibold text-Primary mt-2">
-                    {project?.serviceProvided}
-                  </p>
-                </div>
-                <div>
-                  <p className="text-grey100 text-sm">START DATE</p>
-                  <p className="text-xl font-semibold text-Primary mt-2">
-                    {project?.startDate}
-                  </p>
-                </div>
-                {project?.status && (
-                  <div>
-                    <p className="text-grey100 text-sm">STATUS</p>
-                    <p className="text-xl font-semibold text-Primary mt-2">
-                      {project?.status}
-                    </p>
+              ) : (
+                <Fragment>
+                  <div className="flex uppercase px-4 sm:px-[7%] justify-between flex-wrap gap-3">
+                    <div>
+                      <p className="text-grey100 text-sm">LOCATION</p>
+                      <p className="text-xl font-semibold text-Primary mt-2">
+                        {project?.location}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-grey100 text-sm">SECTOR</p>
+                      <p className="text-xl font-semibold text-Primary mt-2">
+                        {project?.sector}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-grey100 text-sm">SERVICE PROVIDED</p>
+                      <p className="text-xl font-semibold text-Primary mt-2">
+                        {project?.serviceProvided}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-grey100 text-sm">START DATE</p>
+                      <p className="text-xl font-semibold text-Primary mt-2">
+                        {project?.startDate}
+                      </p>
+                    </div>
+                    {project?.status && (
+                      <div>
+                        <p className="text-grey100 text-sm">STATUS</p>
+                        <p className="text-xl font-semibold text-Primary mt-2">
+                          {project?.status}
+                        </p>
+                      </div>
+                    )}
+                    <div>
+                      <p className="text-grey100 text-sm">COMPLETION DATE</p>
+                      <p className="text-xl font-semibold text-Primary mt-2">
+                        {project?.completionDate}
+                      </p>
+                    </div>
                   </div>
-                )}
-                <div>
-                  <p className="text-grey100 text-sm">COMPLETION DATE</p>
-                  <p className="text-xl font-semibold text-Primary mt-2">
-                    {project?.completionDate}
-                  </p>
-                </div>
-              </div>
+                </Fragment >
+              )}
               <p className="text-grey100 px-4 sm:px-[7%] my-12 text-justify leading-[2]">
                 {project?.details}
               </p>
@@ -110,7 +118,7 @@ const Projects = () => {
                   </figure>
                 ))}
               </div>
-            </div>
+            </div >
             <div>
               <CollaboratorContact />
             </div>
@@ -118,7 +126,7 @@ const Projects = () => {
         ) : (
           <ErrorPage />
         )}
-      </PagesContainer>
+      </PagesContainer >
     </>
   );
 };
