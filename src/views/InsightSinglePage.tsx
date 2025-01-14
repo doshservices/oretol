@@ -4,7 +4,7 @@ import { Navbar } from '../components/Navbar'
 import backArrow from '../assets/icons/back-arrow.svg.svg'
 import { Link, useParams } from 'react-router-dom'
 import ReactPlayer from 'react-player'
-import homeHero from "../assets/pictures/homeHero.png";
+// import homeHero from "../assets/pictures/homeHero.png";
 import { SingleInsight } from '../data/blog/insights'
 import { ErrorPage } from './PageNotFound'
 

@@ -23,7 +23,7 @@ export const insights = [
         title: 'Beaver® 65 DDSP Bought By Nigerian Dredging Company, Oretol.',
         category: 'Market Insight',
         date: 'Dec 10, 2020',
-        insightLink:"a-chat-with-marc-fransen-general-manager-ihc-fleet-management"
+        insightLink:"null"
     },
     // {
     //     img: oretol,
@@ -62,6 +62,13 @@ export const SingleInsight = [
     {
         title:"A chat with Marc Fransen-General manager IHC fleet management",
         id:"a-chat-with-marc-fransen-general-manager-ihc-fleet-management",
+        date:"Jul 10, 2024",
+        details:"Step into an insightful conversation with Marc Fransen, the General Manager of IHC Fleet Management, as we explore the cutting-edge strategies and innovations driving the maritime industry forward. Discover his expert perspectives on fleet optimization, sustainable practices, and the evolving challenges shaping the future of fleet management. From his wealth of experience to his forward-thinking approach, Marc shares valuable insights that illuminate the path to efficiency and excellence in fleet operations. Don’t miss this opportunity to learn from a leader at the forefront of maritime innovation.",
+        videoUrl:"https://res.cloudinary.com/dbz1rgohb/video/upload/v1736848196/ORETOL_DREDGING_DOCUMENTARY_INTERVIEWEE_NAMES_tgp6jg.mp4"
+    },
+    {
+        title:"Beaver® 65 DDSP Bought By Nigerian Dredging Company, Oretol.",
+        id:"beaver-65-ddsp-bought-by-nigerian-dredging-company-oretol",
         date:"Jul 10, 2024",
         details:"Step into an insightful conversation with Marc Fransen, the General Manager of IHC Fleet Management, as we explore the cutting-edge strategies and innovations driving the maritime industry forward. Discover his expert perspectives on fleet optimization, sustainable practices, and the evolving challenges shaping the future of fleet management. From his wealth of experience to his forward-thinking approach, Marc shares valuable insights that illuminate the path to efficiency and excellence in fleet operations. Don’t miss this opportunity to learn from a leader at the forefront of maritime innovation.",
         videoUrl:"https://res.cloudinary.com/dbz1rgohb/video/upload/v1736848196/ORETOL_DREDGING_DOCUMENTARY_INTERVIEWEE_NAMES_tgp6jg.mp4"
