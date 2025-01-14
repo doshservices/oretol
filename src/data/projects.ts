@@ -72,7 +72,6 @@ export const ourProjects = [
       reclaim5,
       reclaim6,
       lake10,
-      reclaim8,
     ]
   },
   {
@@ -102,7 +101,6 @@ export const ourProjects = [
       reclaim5,
       reclaim6,
       lake10,
-      reclaim8,
     ]
   },
   {
@@ -132,7 +130,6 @@ export const ourProjects = [
       reclaim5,
       reclaim6,
       lake10,
-      reclaim8,
     ]
   },
   {
