@@ -96,7 +96,7 @@ const Projects = () => {
                   {project?.assurance}
                 </p>
               </section>
-              <div className="grid grid-cols-2 sm:grid-cols-4 px-4 gap-3 sm:gap-5">
+              <div className="grid grid-cols-2 sm:grid-cols-4 px-4 gap-3 sm:gap-5 mb-10">
                 {project?.otherGallery?.map((gallery, index) => (
                   <figure
                     className="h-[200px] border border-Primary rounded-md overflow-hidden"

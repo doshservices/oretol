@@ -9,7 +9,7 @@ export const insights = [
         title: 'A chat with Marc Fransen-General manager IHC fleet management',
         category: 'Market Insight',
         date: 'Dec 10, 2024',
-        insightLink:"/insight/a-chat-with-marc-fransen-general-manager-ihc-fleet-management"
+        insightLink:"a-chat-with-marc-fransen-general-manager-ihc-fleet-management"
     },
     {
         img: partner,
@@ -51,7 +51,7 @@ export const insights = [
     // },
 ]
 
-export const SingleInsight =[
+export const SingleInsight = [
     {
         id:"unearthing-the-Depth-a-journey-with-oretol-nigeria-limited",
         title:"Unearthing the Depth : A journey with Oretol Nigeria Limited",
@@ -60,6 +60,7 @@ export const SingleInsight =[
         videoUrl:"https://res.cloudinary.com/dbz1rgohb/video/upload/v1736848382/MR_MARC_S_INTERVIEW_03_._MOV_qdmrzp.mov"
     },
     {
+        title:"A chat with Marc Fransen-General manager IHC fleet management",
         id:"a-chat-with-marc-fransen-general-manager-ihc-fleet-management",
         date:"Jul 10, 2024",
         details:"Step into an insightful conversation with Marc Fransen, the General Manager of IHC Fleet Management, as we explore the cutting-edge strategies and innovations driving the maritime industry forward. Discover his expert perspectives on fleet optimization, sustainable practices, and the evolving challenges shaping the future of fleet management. From his wealth of experience to his forward-thinking approach, Marc shares valuable insights that illuminate the path to efficiency and excellence in fleet operations. Don’t miss this opportunity to learn from a leader at the forefront of maritime innovation.",

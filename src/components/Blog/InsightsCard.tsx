@@ -5,7 +5,7 @@ export const InsightCard = ({ insight }: IInsights) => {
 
     return (
         <article>
-            <Link to={insight.insightLink}>
+            <Link to={"/insight/"+insight.insightLink}>
                 <figure>
                     <img className="w-full" src={insight?.img} alt={insight?.title} />
                 </figure>

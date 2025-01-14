@@ -45,11 +45,11 @@ const Insight = () => {
           <h3 className="text-Primary font-medium text-xl md:text-[1.6rem] mb-6">
             Latest
           </h3>
-          <div className="grid ssm:grid-cols-2 max-w-[1500px] mx-auto gap-4 sm:gap-6">
+          {/* <div className="grid ssm:grid-cols-2 max-w-[1500px] mx-auto gap-4 sm:gap-6">
             {insights.slice(0, 2).map((insight, index: number) => (
               <InsightCard key={index} insight={insight} />
             ))}
-          </div>
+          </div> */}
           <div className="grid ssm:grid-cols-2 md:grid-cols-3 max-w-[1500px] mx-auto gap-4 sm:gap-6 mt-4 sm:mt-6">
             {insights.slice(1, 4).map((insight, index: number) => (
               <InsightCard key={index} insight={insight} />
