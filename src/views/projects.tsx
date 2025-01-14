@@ -70,12 +70,14 @@ const Projects = () => {
                         </p>
                       </div>
                     )}
-                    <div>
-                      <p className="text-grey100 text-sm">COMPLETION DATE</p>
-                      <p className="text-xl font-semibold text-Primary mt-2">
-                        {project?.completionDate}
-                      </p>
-                    </div>
+                    {project?.completionDate && (
+                      <div>
+                        <p className="text-grey100 text-sm">COMPLETION DATE</p>
+                        <p className="text-xl font-semibold text-Primary mt-2">
+                          {project?.completionDate}
+                        </p>
+                      </div>
+                    )}
                   </div>
                 </Fragment >
               )}
