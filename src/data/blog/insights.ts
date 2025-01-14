@@ -20,13 +20,13 @@ export const insights = [
         img: beaver,
         title: 'Beaver® 65 DDSP Bought By Nigerian Dredging Company, Oretol.',
         category: 'Market Insight',
-        date: 'Dec 10, 2022'
+        date: 'Dec 10, 2020'
     },
     // {
     //     img: oretol,
     //     title: 'Oretol Unveils Plans for Vertical Forest Skyscraper in Midtown Manhattan',
     //     category: 'Market Insight',
-    //     date: 'Dec 10, 2022'
+    //     date: 'Dec 10, 2020'
     // },
     // {
     //     img: ecoFriendly,
@@ -38,12 +38,12 @@ export const insights = [
     //     img: beaver,
     //     title: 'Beaver® 65 DDSP Bought By Nigerian Dredging Company, Oretol.',
     //     category: 'Market Insight',
-    //     date: 'Dec 10, 2022'
+    //     date: 'Dec 10, 2020'
     // },
     // {
     //     img: oretol,
     //     title: 'Oretol Unveils Plans for Vertical Forest Skyscraper in Midtown Manhattan',
     //     category: 'Market Insight',
-    //     date: 'Dec 10, 2022'
+    //     date: 'Dec 10, 2020'
     // },
 ]
