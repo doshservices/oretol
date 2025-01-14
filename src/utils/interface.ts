@@ -8,7 +8,8 @@ export interface IInsights {
         img: string
         category: string
         title: string
-        date: string
+        date: string,
+        insightLink:string
     }
 }
 

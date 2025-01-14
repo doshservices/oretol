@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home, About, Contact, Insight, Services, Work } from "./views";
+import { Home, About, Contact, Insight, Services, Work, InsightSinglePage } from "./views";
 import { SupportBtn } from "./components/Button";
 import { Footer } from "./components/Footer";
 import ScrollToTop from "./components/ScrollPageToTop";
@@ -20,6 +20,7 @@ function App() {
           <Route path="/project/:id" element={<Projects />} />
           <Route path="/work" element={<Work />} />
           <Route path="/insight" element={<Insight />} />
+          <Route path="/insight/:id" element={<InsightSinglePage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
