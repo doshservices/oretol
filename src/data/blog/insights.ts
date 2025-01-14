@@ -6,13 +6,13 @@ import beaver from '../../assets/pictures/blog/Img - Ford Newby.png'
 export const insights = [
     {
         img: ecoFriendly,
-        title: 'Eco-Friendly Condo Complex Set to Open in Ikate, Lekki.',
+        title: 'A chat with Marc Fransen-General manager IHC fleet management',
         category: 'Market Insight',
         date: 'Dec 10, 2024'
     },
     {
         img: partner,
-        title: 'Oretol Nigeria partners with Royal IHC.',
+        title: 'Unearthing the Depth : A journey with Oretol Nigeria Limited.',
         category: 'Market Insight',
         date: 'Jul 10, 2024'
     },
