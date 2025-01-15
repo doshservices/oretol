@@ -79,7 +79,7 @@ export const ourProjects = [
     img: hamptonIsland,
     title: "Innovative solutions for Complex projects",
     description:
-      "Hampton island is an exclusive residential development located in the serene neighborhood of Ikate, Lekki. This lakeside project is designed to offer a perfect blend of modern living and natural tranquility, providing residents with a unique lifestyle surrounded by the beauty of nature. The apartments are thoughtfully crafted with contemporary architecture, luxurious finishes, and stunning views of the lake, ensuring comfort and elegance at every turn. Hampton Lake combines accessibility with peace, being just a short drive from key landmarks in Lekki while maintaining a calm, picturesque environment. It's more than a residence—it's a retreat where urban convenience meets lakeside serenity.",
+      "Experience a redefined standard of living at Hampton Island Estate. This remarkable location offers an exceptional opportunity to unwind, relax, and embrace a luxurious lifestyle. It is truly a place designed for those seeking both tranquility and sophistication",
     location: "Osapa, Lekki",
     heroImg: island,
     projectDetails: "HAMPTON ISLAND AT OSAPA,LEKKI",  
@@ -113,7 +113,7 @@ export const ourProjects = [
     heroImg: hero3,
     projectDetails: "HAMPTON LAKE AT LEKKI",
     assurance:
-      "Our apartments are equipped with state-of-the-art smart home systems and modern security features, ensuring you have complete control and peace of mind over your living space at all times.",
+      "Our properties are equipped with state-of-the-art smart home systems and modern security features, empowering residents to manage their living environment effectively while ensuring a sense of security and tranquility.",
     sector: "REAL ESTATE",
     serviceProvided: "LAND RECLAIMATION",
     startDate: "1, Mar 2019",
