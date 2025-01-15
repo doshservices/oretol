@@ -12,7 +12,7 @@ import bay2 from "../assets/pictures/projects/hampton-bay/Frame 1000008023.png";
 import bay3 from "../assets/pictures/projects/hampton-bay/Frame 1000008024.png";
 import bay4 from "../assets/pictures/projects/hampton-bay/Frame 1000008025.png";
 import bay5 from "../assets/pictures/projects/hampton-bay/Frame 1000008024-1.png";
-import bay6 from "../assets/pictures/projects/hampton-bay/Frame 1000008023-1.png";
+import bay6 from "../assets/pictures/blog/DJI_0323.jpg";
 import bay7 from "../assets/pictures/projects/hampton-bay/Frame 1000008022-1.png";
 import bay8 from "../assets/pictures/projects/hampton-bay/Frame 1000008025-1.png";
 
