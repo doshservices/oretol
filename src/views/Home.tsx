@@ -10,7 +10,8 @@ import { whatWeDo } from "../data/whatWeDo";
 import { ourProjects } from "../data/projects";
 import { insights } from "../data/blog/insights";
 import { InsightCard } from "../components/Blog/InsightsCard";
-import { Swiper, SwiperSlide, SwiperClass } from "swiper/react";
+import { Swiper, SwiperSlide} from "swiper/react";
+// SwiperClass
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -28,7 +29,7 @@ const Home = () => {
   const currentProject = ourProjects.find(
     (projects) => projects.id === project
   );
-  const [swiperRef, setSwiperRef] = useState<SwiperClass | null>(null);
+  // const [swiperRef, setSwiperRef] = useState<SwiperClass | null>(null);
 
   return (
     <>
@@ -340,7 +341,7 @@ const Home = () => {
         <TopWatermark />
         <h3 className="font-medium text-2xl text-Primary">Featured Insights</h3>
         <div className="relative">
-          <button onClick={() => swiperRef?.slidePrev()} className="absolute top-1/2 z-10 p-1.5 bg-Primary rounded-full">
+          {/* <button onClick={() => swiperRef?.slidePrev()} className="absolute top-1/2 z-10 p-1.5 bg-Primary rounded-full">
             <svg width="25" height="25" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="m15 18-6-6 6-6"></path>
             </svg>
@@ -349,9 +350,10 @@ const Home = () => {
             <svg width="25" height="25" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="m9 18 6-6-6-6"></path>
             </svg>
-          </button>
+          </button> */}
+  
           <Swiper
-            onSwiper={setSwiperRef}
+            // onSwiper={setSwiperRef}
             breakpoints={{
               250: {
                 slidesPerView: 1,

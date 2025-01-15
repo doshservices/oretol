@@ -18,7 +18,7 @@ export default function InsightSinglePage() {
             <Navbar />
             <PagesContainer>
                 {insight?.id ? (
-                    <section className='px-[7%] py-12'>
+                    <section className='px-[7%] py-12 overflow-hidden'>
                         <Link to='/insight'>
                             <div className='flex items-center gap-3'>
                                 <span><img src={backArrow} alt="" /></span>
@@ -40,26 +40,21 @@ export default function InsightSinglePage() {
                                 <p className='font-[400] text-[16px] text-[#6A6A6A] leading-[32px] tracking-[-0.36px]'>{insight.details}</p>
                             </div>
 
-                            <div className="relative h-screen max-h-[600px] lg:max-h-[750px] flex items-end px-4 sm:px-[7%] py-12 mt-20 overflow-hidden">
-
+                            <div className="relative h-screen max-h-[600px] lg:max-h-[750px] flex items-end px-4 sm:px-[7%] py-12 mt-20">
                                 <ReactPlayer
-                                    muted
                                     loop={true}
-                                    controls={false}
-                                    className="home-hero-video scale-[3.8] sm:scale-[2] lg:scale-[1.5] 3xl:scale-[2] -z-[1] pointer-events-none mt-[400px]"
+                                    controls={true}
                                     playing={true}
                                     url={insight.videoUrl}
-                                    style={{backgroundPosition:"center", backgroundSize:"cover"}}
+                                    width="100%" // Full width
+                                    height="100%" // Full height
+                                    className="absolute inset-0" // Ensure it's positioned absolutely within the parent
                                 />
-                                {/* <img
-                                    src={homeHero}
-                                    alt=""
-                                    className="w-full absolute inset-0 min-h-full object-cover -z-[2]"
-                                /> */}
+                                
                             </div>
                         </div>
                     </section>
-                ):(
+                ) : (
                     <ErrorPage />
                 )}
 

@@ -51,7 +51,7 @@ const Insight = () => {
             ))}
           </div> */}
           <div className="grid ssm:grid-cols-2 md:grid-cols-3 max-w-[1500px] mx-auto gap-4 sm:gap-6 mt-4 sm:mt-6">
-            {insights.slice(1, 4).map((insight, index: number) => (
+            {insights.map((insight, index: number) => (
               <InsightCard key={index} insight={insight} />
             ))}
           </div>
