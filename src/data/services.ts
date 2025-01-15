@@ -11,7 +11,7 @@ export const services = [
     description:
       "Oretol Nig. Ltd offers both mechanical and hydraulic dredging solutions to maintain optimal depths for efficient navigation. From mass removal to precise dredging, we can tailor our operations to meet your specific project needs, including rapid dewatering and offsite disposal when required.",
     assurance:
-      "Our dredges are outfitted with state-of-the-art navigational and dredging monitoring equipment, so we know exactly how much material we are digging at any given point.",
+      "Our dredgers are equipped with advanced navigational and dredging monitoring systems. This ensures that we have precise data on the amount of material being dredged at any moment, allowing us to optimize our operations and enhance efficiency.",
   },
   {
     id: "real-estate",

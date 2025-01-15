@@ -61,7 +61,7 @@ export const ourProjects = [
     details:
       "Hampton Bay is an exclusive residential development located in the serene neighbourhood of Ikate, Lekki. This lakeside project is designed to offer a perfect blend of modern living and natural tranquillity, providing residents with a unique lifestyle surrounded by the beauty of nature. The apartments are thoughtfully crafted with contemporary architecture, luxurious finishes, and stunning views of the lake, ensuring comfort and elegance at every turn. Hampton Bay combines accessibility with peace, being just a short drive from key landmarks in Lekki while maintaining a calm, picturesque environment. It's more than a residence—it's a retreat where urban convenience meets lakeside serenity.",
     assurance:
-      "Our apartments are equipped with state-of-the-art smart home systems and modern security features, ensuring you have complete control and peace of mind over your living space at all times.",
+      "Our properties are equipped with state-of-the-art smart home systems and modern security features, empowering residents to manage their living environment effectively while ensuring a sense of security and tranquility.",
     gallery: [bay1, bay2, bay3, bay4, bay5, bay6, bay7, bay8],
     otherGallery :[
       lake9,
@@ -82,9 +82,9 @@ export const ourProjects = [
       "Hampton island is an exclusive residential development located in the serene neighborhood of Ikate, Lekki. This lakeside project is designed to offer a perfect blend of modern living and natural tranquility, providing residents with a unique lifestyle surrounded by the beauty of nature. The apartments are thoughtfully crafted with contemporary architecture, luxurious finishes, and stunning views of the lake, ensuring comfort and elegance at every turn. Hampton Lake combines accessibility with peace, being just a short drive from key landmarks in Lekki while maintaining a calm, picturesque environment. It's more than a residence—it's a retreat where urban convenience meets lakeside serenity.",
     location: "Osapa, Lekki",
     heroImg: island,
-    projectDetails: "HAMPTON ISLAND AT IKATE",
+    projectDetails: "HAMPTON ISLAND AT OSAPA,LEKKI",  
     assurance:
-      "Our apartments are equipped with state-of-the-art smart home systems and modern security features, ensuring you have complete control and peace of mind over your living space at all times.",
+      "Our properties are equipped with state-of-the-art smart home systems and modern security features, empowering residents to manage their living environment effectively while ensuring a sense of security and tranquility.",
     sector: "REAL ESTATE",
     serviceProvided: "CONSTRUCTION & LAND RECLAIMATION",
     startDate: "1, MAR 2019",
@@ -137,7 +137,7 @@ export const ourProjects = [
     img: landReclaim,
     title: "Innovative solutions for Complex projects",
     description:
-      "The Hampton Bay Estate is the perfect location for a modern, vibrant lifestyle with extraordinary services and amenities carefully designed to create an enjoyable everyday life.",
+      "The overall growth in the global population and the trend of migration towards coastal areas has led to a huge rise in the number of land reclamation projects. Residential areas, ports and airports are increasingly expanding in the direction of the coast and water. The dredging process uses sand, clay or rock from the seabed to create new land. Many land reclamation activities are combined with projects for deepening of ports and access channels, since the reuse of the dredged materials for adjacent jobs may reduce the total costs.",
     location: "null",
     heroImg: hero4,
     projectDetails: "LAND RECLAIMATION",

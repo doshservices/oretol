@@ -339,7 +339,7 @@ const Home = () => {
       </section>
       <section className="pl-4 sm:pl-[7%] py-16 relative">
         <TopWatermark />
-        <h3 className="font-medium text-2xl text-Primary">Featured Insights</h3>
+        <h3 className="font-medium text-2xl text-Primary lg:mt-24">Featured Insights</h3>
         <div className="relative">
           {/* <button onClick={() => swiperRef?.slidePrev()} className="absolute top-1/2 z-10 p-1.5 bg-Primary rounded-full">
             <svg width="25" height="25" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
