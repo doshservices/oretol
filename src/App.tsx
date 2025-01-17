@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home, About, Contact, Insight, Services, Work, InsightSinglePage } from "./views";
+import { Home, About, Contact, Insight, Services, Work, InsightSinglePage, CompanyProfile } from "./views";
 import { SupportBtn } from "./components/Button";
 import { Footer } from "./components/Footer";
 import ScrollToTop from "./components/ScrollPageToTop";
@@ -18,6 +18,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services/:id" element={<Services />} />
           <Route path="/project/:id" element={<Projects />} />
+          <Route path="/company-profile" element={<CompanyProfile />} />
           <Route path="/work" element={<Work />} />
           <Route path="/insight" element={<Insight />} />
           <Route path="/insight/:id" element={<InsightSinglePage />} />
