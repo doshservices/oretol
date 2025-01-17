@@ -42,6 +42,11 @@ import lake10 from "../assets/pictures/projects/lake/Frame 1000008022 (2).png"
 import lake11 from "../assets/pictures/projects/lake/Frame 1000008025.png"
 
 import island from "../assets/pictures/projects/hamptop-island/Frame 1000008022.png";
+
+import islandOne from "../assets/pictures/projects/hampton-bay/imageOne.jpg"
+import islandTwo from "../assets/pictures/projects/hampton-bay/imageTHree.jpg"
+import islandThree from "../assets/pictures/projects/hampton-bay/imageFour.jpg"
+import islandFour from "../assets/pictures/projects/hampton-bay/imageFive.jpg"
  
 
 export const ourProjects = [
@@ -91,7 +96,7 @@ export const ourProjects = [
     completionDate: "ONGOING",
     details:
       "Nestled in the prestigious Osapa area of Lekki, Hampton Island emerges as a beacon of luxury and sophistication, this exclusive estate presents a range of plot sizes, from 600 sqm and above and larger plot sizes that cater to diverse needs, accommodating luxurious residences and bespoke developments that redefine modern living. At Hampton Island, meticulous planning and execution are evident as the estate undergoes meticulous sand filling, a testament to our commitment to delivering exceptional living environments. Upon completion, Hampton Island will stand as a luxurious fully residential enclave, seamlessly integrated into the vibrant fabric of the Lekki Peninsula. Much like our other esteemed estates, Hampton Island promises a lifestyle of unparalleled comfort and convenience. Residents can expect adequate electricity and water supply, ensuring uninterrupted daily living. A well-planned road network within the estate, thereby facilitating seamless mobility, complemented by efficient waste disposal systems that contribute to a clean and sustainable environment. Moreover, Hampton Island will boast an array of amenities reminiscent of our renowned Hampton Bay and Hampton Lake estates. Residents will indulge in stunning waterfront views, private marina access, and lush green spaces ideal for relaxation and outdoor activities. A thoughtfully designed park beckons families for leisurely gatherings, picnics, and children's play, fostering a sense of community and well-being. As with all our developments, Hampton Island embodies Oretol's unwavering commitment to quality, innovation, and excellence, promising residents a life of tranquillity in one of Lagos' most coveted locales.",
-    gallery: [lake1, lake2, reclaim8, lake4, reclaim5, lake6, bay7, lake8],
+    gallery: [islandOne, islandTwo, reclaim8, islandThree, reclaim5, islandFour, bay7, lake8],
     otherGallery :[
       lake9,
       reclaim1,
