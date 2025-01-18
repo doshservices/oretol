@@ -18,12 +18,13 @@ import "swiper/css/pagination";
 import { CollaboratorContact } from "../components/CollaboratorContact";
 import ReactPlayer from "react-player";
 import { HomeNav } from "../components/HomeNav";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [officeLocation, setOfficeLocation] = useState<string>("lagos");
   const [visionType, setVisionType] = useState<string>("dredging");
   const [project, setProject] = useState<string>("hampton-bay");
+  const  navigate = useNavigate()
 
   const currentVision = whatWeDo.find((service) => service.id === visionType);
   const currentProject = ourProjects.find(
@@ -91,11 +92,11 @@ const Home = () => {
           </p>
           <div className="flex flex-wrap gap-4 max-w-[577px] mt-12">
             <button
-              className={`${styles.primaryBtn} sm:grow  sm:basis-[150px] shrink-0 max-w-52`}
+              className={`${styles.primaryBtn} sm:grow  sm:basis-[150px] shrink-0 max-w-52`} onClick={() => navigate('/company-profile')}
             >
               Company’s Profile
             </button>
-            <button
+            {/* <button
               className={`${styles.primaryBtn} sm:grow  sm:basis-[150px] shrink-0 max-w-52`}
             >
               CSR Policy
@@ -104,7 +105,7 @@ const Home = () => {
               className={`${styles.primaryBtn} sm:grow  sm:basis-[150px] shrink-0 max-w-52`}
             >
               HSE Policy
-            </button>
+            </button> */}
           </div>
         </section>
         <div className="grid gap-12">
