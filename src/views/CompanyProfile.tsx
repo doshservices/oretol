@@ -1,10 +1,8 @@
 import { Fragment } from "react/jsx-runtime";
 import { PagesContainer } from "../components/PagesContainer";
 import { Navbar } from "../components/Navbar";
-import { styles } from "../utils/styles";
 import { BottomWatermark, TopWatermark } from "../components/watermark";
 import { AnimatePresence, motion } from "framer-motion";
-import { twMerge } from "tailwind-merge";
 
 import companyImage from "../assets/pictures/company-profile/image 1.png"
 import companyImage2 from "../assets/pictures/company-profile/image 2.png"
@@ -19,6 +17,7 @@ import companyLogo4 from "../assets/pictures/company-profile/companiesLogo/Pictu
 import companyLogo5 from "../assets/pictures/company-profile/companiesLogo/Picture6 1.png"
 import companyLogo6 from "../assets/pictures/company-profile/companiesLogo/Picture7 1.png"
 import companyLogo7 from "../assets/pictures/company-profile/companiesLogo/Picture8 1.png"
+import companyLogo8 from "../assets/pictures/company-profile/companiesLogo/Picture3 1.png"
 import { CollaboratorContact } from "../components/CollaboratorContact";
 import { useState } from "react";
 
@@ -144,8 +143,8 @@ export default function CompanyProfile() {
                     </div>
                 </section>
                 <section className="py-16 text-Primary px-4 sm:px-[7%] relative">
-                    <h2 className='line-heading text-sm uppercase mb-4'>OUR VISION & VALUES</h2>
-                    <div className="grid grid-cols-4 gap-10 mt-10 max-md:grid-cols-2">
+                    <h2 className='line-heading text-sm uppercase mb-4'>Our trusted partners</h2>
+                    <div className="grid grid-cols-4 gap-10 mt-10 max-md:grid-cols-2 items-center">
                         <img src={companyLogo} alt="" className="max-md:w-[80%]" />
                         <img src={companyLogo2} alt="" className="max-md:w-[80%]" />
                         <img src={companyLogo3} alt="" className="max-md:w-[80%]" />
@@ -153,6 +152,7 @@ export default function CompanyProfile() {
                         <img src={companyLogo5} alt="" className="max-md:w-[80%]" />
                         <img src={companyLogo6} alt="" className="max-md:w-[80%]" />
                         <img src={companyLogo7} alt="" className="max-md:w-[80%]" />
+                        <img src={companyLogo8} alt="" className="max-md:w-[70%]" />
                     </div>
                 </section>
                 <CollaboratorContact />
