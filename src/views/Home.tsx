@@ -116,14 +116,14 @@ const Home = () => {
               className="h-16 sm:h-[90px]"
             />
             <div>
-              <p className="text-3xl sm:text-[2.8rem] font-medium">16</p>
+              <p className="text-3xl sm:text-[2.8rem] font-medium">20</p>
               <p className="text-xl">Years of experience</p>
             </div>
           </div>
           <div className="border-l-[3px] border-l-Primary px-4 py-3 flex items-center gap-3">
             <img src={partners} alt="partners" className="h-16 sm:h-[90px]" />
             <div>
-              <p className="text-3xl sm:text-[2.8rem] font-medium">20</p>
+              <p className="text-3xl sm:text-[2.8rem] font-medium">8</p>
               <p className="text-xl">Trusted partners</p>
             </div>
           </div>
@@ -134,7 +134,7 @@ const Home = () => {
               className="h-16 sm:h-[90px]"
             />
             <div>
-              <p className="text-3xl sm:text-[2.8rem] font-medium">100</p>
+              <p className="text-3xl sm:text-[2.8rem] font-medium">65</p>
               <p className="text-xl">Projects done</p>
             </div>
           </div>
