@@ -8,7 +8,7 @@ import companyImage from "../assets/pictures/company-profile/image 1.png"
 import companyImage2 from "../assets/pictures/company-profile/image 2.png"
 import { watermark } from "../utils/constants";
 import oretolWatermark from "../assets/pictures/oretol watermark-2.png"
-import historicalImage from "../assets/pictures/historia-de-acciona-01.png"
+// import historicalImage from "../assets/pictures/historia-de-acciona-01.png"
 
 import companyLogo from "../assets/pictures/company-profile/companiesLogo/Picture1 1.png"
 import companyLogo2 from "../assets/pictures/company-profile/companiesLogo/Picture2 1 (2).png"
@@ -77,7 +77,7 @@ export default function CompanyProfile() {
                         <h3 className="font-medium text-2xl md:text-[2.8rem] leading-[1.3]">
                             A fully indigenous dredging and infrastructure company in Nigeria, delivering top-quality services to businesses and government agencies across Nigeria and Africa.
                         </h3>
-                        <p className="mt-5 leading-[2] text-[#6A6A6A]">Oretol Nigeria Limited is a wholly indigenous dredging and infrastructure company incorporated in Nigeria to provide first class, quality and excellent service to companies and government agencies in Nigeria and Africa. Since its incorporation in 2005, Oretol has  been engaged in several dredging and port infrastructure related projects in Nigeria and Africa.
+                        <p className="mt-5 leading-[2] text-[#6A6A6A] text-justify">Oretol Nigeria Limited is a wholly indigenous dredging and infrastructure company incorporated in Nigeria to provide first class, quality and excellent service to companies and government agencies in Nigeria and Africa. Since its incorporation in 2005, Oretol has  been engaged in several dredging and port infrastructure related projects in Nigeria and Africa.
                             Oretol comprises of an integrated group of <b>highly skilled and tested Nigerian and other foreign professionals,</b> having a common goal of providing efficient service delivery in infrastructure development. With technical back-up from our associates/partners both at home and abroad, Oretol offers a wide range of technical services in the highly specialised fields of dredging, land reclamation, marine infrastructure, offshore energy,  channelization, infrastructure development and projects, logistics, engineering services, equipment supply and handling, management, scientific, and technical consulting services.
                             Oretol has in place, a prudent Management Board and Technical Staff of seasoned Managers, as well as Consultants, who through various delivery networks, ensures its clients get technical competence, reliability, promptness and efficiency.
                             Oretol also has an excellent working relationship with the Lagos State Government, the Nigerian Inland Waterways Authority and other regulatory agencies which translates into a smooth and hitch free execution of projects without regulatory bottlenecks. </p>
@@ -115,7 +115,7 @@ export default function CompanyProfile() {
                         Our goal is to become a more efficient and impactful tool for the nation each day.
                     </p>
 
-                    <div className="mt-20 grid grid-cols-2 gap-10 max-md:grid-cols-1">
+                    <div className="mt-20 grid gap-10">
                         <div className="flex flex-col gap-10">
                             {data.map((text, textIndex) => (
                                 <div key={text.headingText} onClick={() => setSeletedIndex(textIndex)} className="cursor-pointer">
@@ -124,21 +124,24 @@ export default function CompanyProfile() {
                                     </div>
                                     <AnimatePresence>
                                         {selectedIndex === textIndex && (
-                                            <motion.div initial={{ height: 0, marginTop: 0 }} animate={{ height: "auto", marginTop: 24 }} exit={{ height: 0, marginTop: 0 }} className="overflow-hidden">
-                                                {text.paragraphText && <p className="text-white/50">{text.paragraphText}</p>}
-                                                {text.listDetails && <div className="grid gap-4 list-decimal">
-                                                    {text.listDetails.map((list, index) => (
-                                                        <li className="text-white/50" key={index}>{list}</li>
-                                                    ))}
-                                                </div>}
+                                            <motion.div initial={{ height: 0, marginTop: 0 }} animate={{ height: "auto", marginTop: 24 }} exit={{ height: 0, marginTop: 0 }} className="overflow-hidden grid grid-cols-2 gap-3 max-md:grid-cols-1">
+                                                <div>
+                                                    <p className="text-[25px] mb-5 uppercase">Background</p>
+                                                    {text.paragraphText && <p className="text-white/50">{text.paragraphText}</p>}
+                                                    {text.listDetails && <div className="grid gap-4 list-decimal">
+                                                        {text.listDetails.map((list, index) => (
+                                                            <li className="text-white/50" key={index}>{list}</li>
+                                                        ))}
+                                                    </div>}
+                                                </div>
+                                                <div>
+                                                    <img src={companyImage2} alt="" className="h-[300px] max-md:h-[400px] w-full object-cover" />
+                                                </div>
                                             </motion.div>
                                         )}
                                     </AnimatePresence>
                                 </div>
                             ))}
-                        </div>
-                        <div className="w-full">
-                            <img src={historicalImage} alt="" />
                         </div>
                     </div>
                 </section>
