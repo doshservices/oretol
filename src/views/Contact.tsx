@@ -37,14 +37,14 @@ const Contact = () => {
                   heading="Our Headquarters"
                   address="49, Glover Road, Ikoyi, Lagos State."
                   email="info@oretol.com"
-                  number="+234 818 712 5513"
+                  number="+234 704 700 4770"
                 />
               </div>
               <ContactAddress
                 heading="Our Nearest Branch"
                 address="Lagos – Ibadan Expressway, Isheri, Ogun State."
                 email="info@oretol.com"
-                number="+234 818 712 5507"
+                number="+234 704 700 4771"
               />
             </div>
             <ContactForm />
