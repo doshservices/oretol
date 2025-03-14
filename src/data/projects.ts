@@ -47,7 +47,7 @@ import island3 from "../assets/pictures/islandImage2.jpg";
 import island4 from "../assets/pictures/islandImage3.jpg";
 
 import islandOne from "../assets/pictures/projects/hampton-bay/imageOne.jpg"
-import islandTwo from "../assets/pictures/projects/hampton-bay/imageTHree.jpg"
+import islandTwo from "../assets/pictures/projects/hampton-bay/imageThree.jpg"
 import islandThree from "../assets/pictures/projects/hampton-bay/imageFour.jpg"
 import islandFour from "../assets/pictures/projects/hampton-bay/imageFive.jpg"
  
